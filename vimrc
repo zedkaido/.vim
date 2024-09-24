@@ -164,6 +164,10 @@ def Today(): string
 	return strftime('%Y-%m-%d')
 enddef
 
+def Time(): string
+	return strftime('%H:%M')
+enddef
+
 def KM()
 	edit ~/zk/km
 enddef
@@ -173,11 +177,17 @@ def KMT()
 	execute 'edit' path
 enddef
 
-def PToday()
+def LogDay()
 	@t = Today()
+	normal! "tp
+enddef
+
+def LogTime()
+	@t = "@T:" .. Time() .. ":"
 	normal! "tp
 enddef
 
 command KM KM()
 command KMT KMT()
-command PToday PToday()
+command LogDay LogDay()
+command LogTime LogTime()

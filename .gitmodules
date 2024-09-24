@@ -1,0 +1,15 @@
+[submodule "pack/mbbill/start/undotree"]
+	path = pack/mbbill/start/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "pack/tpope/start/commentary"]
+	path = pack/tpope/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/tpope/start/fugitive"]
+	path = pack/tpope/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/tpope/start/surround"]
+	path = pack/tpope/start/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/tpope/start/vim-vinegar"]
+	path = pack/tpope/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git

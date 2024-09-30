@@ -153,6 +153,12 @@ set t_Co=256
 # -----------------
 # SECTION: COMMANDS 
 # -----------------
+def MacTerminalMode()
+	set notermguicolors
+	colorscheme blue
+enddef
+command	MT MacTerminalMode()
+
 def Today(): string
 	return strftime('%Y-%m-%d')
 enddef
@@ -164,23 +170,27 @@ enddef
 def KM()
 	edit ~/zk/km
 enddef
+command KM KM()
 
 def KMT()
 	const path = $HOME .. '/zk/km/' .. Today() .. '.txt'
 	execute 'edit' path
 enddef
+command KMT KMT()
+
+def OSX()
+	edit ~/zk/km/osx-setup.txt
+enddef
+command OSX OSX()
 
 def LogDay()
 	@t = Today()
 	normal! "tp
 enddef
+command LogDay LogDay()
 
 def LogTime()
 	@t = "@T:" .. Time() .. ":"
 	normal! "tp
 enddef
-
-command KM KM()
-command KMT KMT()
-command LogDay LogDay()
 command LogTime LogTime()

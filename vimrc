@@ -92,18 +92,6 @@ nnoremap <leader>th :set invhlsearch<CR>
 nnoremap <leader>ts :if exists("g:syntax_on") \| syntax off \| else \| syntax enable \| endif<CR>
 nnoremap <leader>tl :set spell!<CR> 
 
-# LINUX
-noremap <M->> <C-w>5>
-noremap <M-<> <C-w>5<
-noremap <M-+> <C-w>5+
-noremap <M--> <C-w>5-
-
-# OSX
-noremap > <C-w>5>
-noremap < <C-W>5<
-noremap + <C-W>5+
-noremap - <C-W>5-
-
 # --------------
 # SECTION: netrw
 # --------------

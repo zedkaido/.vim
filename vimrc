@@ -46,6 +46,9 @@ set undolevels=1000
 set noswapfile
 set writebackup
 
+# TODO: explore hidden mode?
+# set hidden
+
 # -------------------------
 # SECTION: CMD Line Editing
 # -------------------------
@@ -156,7 +159,8 @@ set viewoptions-=options
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
 # Allow color schemes to do bright colors without forcing bold.
-set t_Co=16
+# TODO: study and use this latter for colorscheme dev.
+set t_Co=256
 
 # -----------------
 # SECTION: COMMANDS 

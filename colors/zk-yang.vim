@@ -1,9 +1,8 @@
 vim9script
 
-set background=light
-
 hi clear
 
+set background=light
 g:colors_name = "zk-yang"
 
 hi Normal guifg=#000000 guibg=#FFFFFF
@@ -20,6 +19,8 @@ hi Special guifg=#000000
 hi Underlined guifg=#000000
 hi Ignore guifg=#000000
 
+hi Visual guifg=#000000 guibg=#D0D0D0
+
 hi Pmenu guifg=#000000 guibg=#F1F1F1
 hi PmenuThumb guibg=#555555
 
@@ -33,13 +34,16 @@ hi VertSplit guifg=#FFFFFF guibg=#A8A8A8
 hi NonText guifg=#000000
 
 hi DiffAdd guifg=#FFFFFF guibg=#0F9655
-hi DiffText guifg=#FFFFFF guibg=#960F2F
-hi DiffChange guifg=#FFFFFF guibg=#E32ED1
-hi DiffDelete guifg=#FFFFFF guibg=#004E87
+hi DiffDelete guifg=#FFFFFF guibg=#960F2F
+hi DiffChange guifg=#FFFFFF guibg=#004E87
+hi DiffText guifg=#FFFFFF guibg=#E32ED1
+
+hi diffAdded guifg=#FFFFFF guibg=#0F9655
+hi diffRemoved guifg=#FFFFFF guibg=#960F2F
 
 hi Added guifg=#FFFFFF guibg=#0F9655
-hi Changed guifg=#FFFFFF guibg=#004E87
 hi Removed guifg=#FFFFFF guibg=#960F2F
+hi Changed guifg=#FFFFFF guibg=#004E87
 
 hi Error guifg=#FFFFFF guibg=#960F2F
 hi Todo guifg=#000000 guibg=#FFFF00

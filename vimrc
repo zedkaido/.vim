@@ -27,6 +27,7 @@ set shiftwidth=3
 
 set noexpandtab
 set smarttab
+set autoindent
 set backspace=indent,eol,start
 
 set virtualedit=block

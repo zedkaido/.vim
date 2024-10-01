@@ -16,3 +16,6 @@
 [submodule "pack/tpope/start/sleuth"]
 	path = pack/tpope/start/sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "pack/lifepillar/start/vim-colortemplate"]
+	path = pack/lifepillar/start/vim-colortemplate
+	url = https://github.com/lifepillar/vim-colortemplate.git

@@ -14,7 +14,7 @@ set relativenumber
 
 set ruler
 set showcmd
-listchars=trail:·
+set listchars=trail:·
 
 set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%=%-14.(%l,%c%V%)\ %P\ \笑
 
@@ -93,7 +93,8 @@ nnoremap <leader>svim :source $MYVIMRC<CR>
 nnoremap <leader>tw :set wrap!<CR>
 nnoremap <leader>th :set invhlsearch<CR>
 nnoremap <leader>ts :if exists("g:syntax_on") \| syntax off \| else \| syntax enable \| endif<CR>
-nnoremap <leader>tl :set spell!<CR> 
+nnoremap <leader>tl :set spell!<CR>
+nnoremap <leader>tn :set number! \| :set relativenumber!<CR>
 nnoremap <leader>tt :set list! \| :echo &list <CR>
 
 # --------------

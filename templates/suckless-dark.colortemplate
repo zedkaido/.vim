@@ -1,10 +1,11 @@
 ; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
 
 ; Information {{{
-Full name:     Suckless Light
-Short name:    suckless-light
+; Mandatory
+Full name:     Suckless Dark 
+Short name:    suckless-dark
 Author:        Zed Kaido <dm@zedkaido.com>
-Maintainer:    Zed Kaido
+Maintainer:    Zed Kaido 
 Website:       TODO 
 Description:   Suckless Dark Color theme for REAL Programmers. 
 License:       MFL LICENSE 
@@ -14,8 +15,8 @@ License:       MFL LICENSE
 ; Other conventional group names (see `:help group-name`)
 Added             -> diffAdded
 Boolean           -> Constant
-Changed           -> diffChanged
 Character         -> Constant
+Changed           -> diffChanged
 Conditional       -> Statement
 CurSearch         -> IncSearch
 CursorLineFold    -> FoldColumn
@@ -40,13 +41,13 @@ PmenuKindSel      -> PmenuSel
 PmenuExtra        -> Pmenu
 PmenuExtraSel     -> PmenuSel
 PmenuMatch        -> Pmenu
-PmenuMatchSel     -> PmenuMatchSel
+PmenuMatchSel     -> PmenuSel
 PopupNotification -> WarningMsg
 PopupSelected     -> PmenuSel
 PreCondit         -> PreProc
 QuickFixLine      -> Search
-Removed           -> diffRemoved
 Repeat            -> Statement
+Removed           -> diffRemoved
 SpecialChar       -> Special
 SpecialComment    -> Special
 ; StatusLineTerm    -> StatusLine
@@ -62,17 +63,16 @@ debugPC           -> SignColumn
 lCursor           -> Cursor
 ; }}}
 
-Background: light
+Background: dark
 
 ; Color palette {{{
 ; Color name         GUI                     Base256     Base16 (optional)
 Color: black         rgb(  0,   0,   0)      16          Black
-Color: white         rgb(255, 255, 255)      231         White
+Color: white         rgb(238, 238, 238)      255         White
 
-Color: grey          rgb(108, 108, 108)      242         Grey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey
+Color: grey          rgb(148, 148, 148)      246         Grey
 Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
-Color: silver        rgb(238, 238, 238)      255         LightGrey
 
 Color: red           rgb(135,   0,   0)      88          DarkRed
 Color: green         rgb(135, 255,   0)      118         DarkGreen
@@ -90,85 +90,87 @@ Term colors: black red green yellow blue magenta cyan white
 ; }}}
 
 ; Default highlight groups {{{
-Variant:    gui 256 16 8
+Variant: gui 256 16 8
 
 ; Group              Foreground        Background        Attributes
-Normal               black             white
-Terminal             black             white
-ColorColumn          black             silver
+Normal               white             black
+Terminal             white             black
+ColorColumn          white             dark_grey
 Conceal              none              none
 
-Cursor               white             black
-CursorColumn         black             white
-CursorLine           black             none
+Cursor               black             white
+CursorColumn         white             black
+CursorLine           white             black
 CursorLineNr         white             blue
-LineNr               black             white
+LineNr               white             black
 
 Added                black             light_grey        bold
-Changed              black             silver            bold
-Removed              white             red
+Changed              white             dark_grey         bold
+Removed              white             red 
 
-DiffAdd              black             light_grey        bold
-DiffChange           black             silver
-DiffDelete           white             red 
-DiffText             black             silver            bold
+DiffAdd              black             light_grey        bold 
+DiffChange           white             dark_grey 
+DiffDelete           white             red
+DiffText             white             dark_grey         bold
 
-Directory            black             white             bold
-EndOfBuffer          black             white
+Directory            white             black             bold
+EndOfBuffer          white             black
 ErrorMsg             white             error
-FoldColumn           black             white
-Folded               black             silver            italic
-MatchParen           black             silver
-ModeMsg              black             white
-MoreMsg              black             white
-NonText              magenta           white
-Pmenu                black             silver
-PmenuSbar            black             white
-PmenuSel             black             white             reverse
-PmenuThumb           black             white
-Question             black             white
+FoldColumn           white             black
+Folded               white             dark_grey         italic
+MatchParen           white             dark_grey
+ModeMsg              white             black
+MoreMsg              white             black
+NonText              magenta           black
+Pmenu                white             blue
+PmenuSbar            white             black
+PmenuSel             white             black             reverse
+PmenuThumb           white             black
+Question             white             black
 
 Search               black             yellow
-IncSearch            white             blue
+IncSearch            white             blue 
 
-SignColumn           black             white
-SpecialKey           magenta           white
-SpellBad             black             white             g=undercurl t=underline s=red
-SpellCap             black             white
-SpellLocal           black             white
-SpellRare            black             white
+SignColumn           white             black
+SpecialKey           magenta           black
+SpellBad             white             black             g=undercurl t=underline s=red
+SpellCap             white             black
+SpellLocal           white             black
+SpellRare            white             black
 
-StatusLine           black             white             bold
-StatusLineNC         grey              white
+StatusLine           white             black             bold
+StatusLineNC         grey              black
 StatusLineTerm       white             blue              bold
 
-TabLine              black             white
-TabLineSel           white             blue
-TabLineFill          black             white
+TabLine              white             black
+TabLineSel           white             blue             bold
+TabLineFill          white             black
 
-Title                black             white
-VertSplit            black             white
-Visual               black             white             reverse
-VisualNOS            black             white
-WarningMsg           black             white
+Title                white             black
+VertSplit            white             black
+Visual               white             black             reverse
+VisualNOS            white             black
+WarningMsg           white             black
+
 WildMenu             white             blue              bold
 ; Other conventional group names (see `:help group-name`)
-Comment              grey              none
-Constant             black             none
-Error                white             error 
-Identifier           black             none
-Ignore               black             none
-PreProc              black             none
-Special              black             none
-Statement            black             none
+Comment              grey              none              italic
+Constant             white             none
+Error                white             error
+
+Identifier           white             none
+Ignore               white             none
+PreProc              white             none
+Special              white             none
+Statement            white             none
 Todo                 black             cyan
-Type                 black             none
-Underlined           black             none              underline
+Type                 white             none
+Underlined           white             none              underline
 ; See `:help CursorIM`
-CursorIM             white             fg
+CursorIM             none              fg
 ; See `:help window-toolbar`
-ToolbarLine          none              white
-ToolbarButton        black             white             bold
+ToolbarLine          none              black
+ToolbarButton        white             black             bold
 ; }}}
 
 ; Additional highlight groups {{{

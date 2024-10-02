@@ -1,12 +1,13 @@
 vim9script
 
-# --------------- 
+# ---------------
 # SECTION: BUFFER
 # ---------------
-syntax off 
+syntax on 
 
-set termguicolors
-colorscheme zk-yang
+# set termguicolors
+colorscheme zk-yang 
+set t_Co=256 # number of colors
 
 set signcolumn=number
 set relativenumber
@@ -147,10 +148,6 @@ set viewoptions-=options
 
 # From `:help :DiffOrig`
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
-
-# Allow color schemes to do bright colors without forcing bold.
-# TODO: study and use this latter for colorscheme dev.
-set t_Co=256
 
 # -----------------
 # SECTION: COMMANDS 

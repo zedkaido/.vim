@@ -22,6 +22,7 @@ set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%=%-14.(%l,%c%V%)\ %P\ \笑
 # SECTION: Text Editing + Indentation
 # -----------------------------------
 set nowrap
+set linebreak
 
 set tabstop=3
 set softtabstop=3

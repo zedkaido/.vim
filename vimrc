@@ -1,18 +1,20 @@
 vim9script
 
-# --------------- 
+# ---------------
 # SECTION: BUFFER
 # ---------------
-syntax off 
+syntax on 
 
-set termguicolors
-colorscheme zk-yang
+# set termguicolors
+colorscheme zk-yang 
+set t_Co=256 # number of colors
 
 set signcolumn=number
 set relativenumber
 
 set ruler
 set showcmd
+set listchars=trail:·
 
 set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%=%-14.(%l,%c%V%)\ %P\ \笑
 
@@ -20,6 +22,7 @@ set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%=%-14.(%l,%c%V%)\ %P\ \笑
 # SECTION: Text Editing + Indentation
 # -----------------------------------
 set nowrap
+set linebreak
 
 set tabstop=3
 set softtabstop=3
@@ -90,7 +93,9 @@ nnoremap <leader>svim :source $MYVIMRC<CR>
 nnoremap <leader>tw :set wrap!<CR>
 nnoremap <leader>th :set invhlsearch<CR>
 nnoremap <leader>ts :if exists("g:syntax_on") \| syntax off \| else \| syntax enable \| endif<CR>
-nnoremap <leader>tl :set spell!<CR> 
+nnoremap <leader>tl :set spell!<CR>
+nnoremap <leader>tn :set number! \| :set relativenumber!<CR>
+nnoremap <leader>tt :set list! \| :echo &list <CR>
 
 # --------------
 # SECTION: netrw
@@ -145,10 +150,6 @@ set viewoptions-=options
 
 # From `:help :DiffOrig`
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
-
-# Allow color schemes to do bright colors without forcing bold.
-# TODO: study and use this latter for colorscheme dev.
-set t_Co=256
 
 # -----------------
 # SECTION: COMMANDS 

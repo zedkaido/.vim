@@ -2,7 +2,7 @@
 
 ; Information {{{
 ; Mandatory
-Full name:     Suckless Dark 
+Full name:     SUCKLESS DARK
 Short name:    suckless-dark
 Author:        Zed Kaido <dm@zedkaido.com>
 Maintainer:    Zed Kaido 
@@ -154,7 +154,7 @@ WarningMsg           white             black
 
 WildMenu             white             blue              bold
 ; Other conventional group names (see `:help group-name`)
-Comment              grey              none              italic
+Comment              grey              none
 Constant             white             none
 Error                white             error
 

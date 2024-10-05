@@ -6,7 +6,7 @@ vim9script
 syntax on 
 
 # set termguicolors
-colorscheme zk-yang 
+colorscheme suckless-blue 
 set t_Co=256 # number of colors
 
 set signcolumn=number

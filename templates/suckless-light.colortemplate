@@ -3,10 +3,9 @@
 ; Information {{{
 Full name:     SUCKLESS LIGHT
 Short name:    suckless-light
-Author:        Zed Kaido <dm@zedkaido.com>
-Maintainer:    Zed Kaido
-Website:       TODO 
-Description:   Suckless Dark Color theme for REAL Programmers. 
+Author:        Zed Kaido
+Website:       https://github.com/zedkaido/suckless-colors 
+Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
 License:       MFL LICENSE 
 ; }}}
 

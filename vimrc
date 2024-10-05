@@ -154,12 +154,6 @@ command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd
 # -----------------
 # SECTION: COMMANDS 
 # -----------------
-def MacTerminalMode()
-	set notermguicolors
-	colorscheme blue
-enddef
-command	MT MacTerminalMode()
-
 def Today(): string
 	return strftime('%Y-%m-%d')
 enddef

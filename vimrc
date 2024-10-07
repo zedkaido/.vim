@@ -49,8 +49,8 @@ set undolevels=1000
 set noswapfile
 set writebackup
 
-# TODO: explore hidden mode?
-# set hidden
+# hide when file abondoned, instead of forced save and unloading
+set hidden
 
 # -------------------------
 # SECTION: CMD Line Editing

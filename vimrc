@@ -97,6 +97,8 @@ nnoremap <leader>tl :set spell!<CR>
 nnoremap <leader>tn :set number! \| :set relativenumber!<CR>
 nnoremap <leader>tt :set list! \| :echo &list <CR>
 
+nnoremap <leader>ll :.!ls -1Fh<CR>
+
 # --------------
 # SECTION: netrw
 # --------------

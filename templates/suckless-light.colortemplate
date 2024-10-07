@@ -4,9 +4,9 @@
 Full name:     SUCKLESS LIGHT
 Short name:    suckless-light
 Author:        Zed Kaido
-Website:       https://github.com/zedkaido/suckless-colors 
+Website:       https://github.com/zedkaido/suckless-colors
 Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
-License:       MFL LICENSE 
+License:       MFL LICENSE
 ; }}}
 
 ; Common linked groups {{{
@@ -109,7 +109,7 @@ Removed              white             red
 
 DiffAdd              black             light_grey        bold
 DiffChange           black             silver
-DiffDelete           white             red 
+DiffDelete           white             red
 DiffText             black             silver            bold
 
 Directory            black             white             bold
@@ -154,7 +154,7 @@ WildMenu             white             blue              bold
 ; Other conventional group names (see `:help group-name`)
 Comment              grey              none
 Constant             black             none
-Error                white             error 
+Error                white             error
 Identifier           black             none
 Ignore               black             none
 PreProc              black             none

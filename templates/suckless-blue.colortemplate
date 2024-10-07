@@ -2,12 +2,12 @@
 
 ; Information {{{
 ; Mandatory
-Full name:     SUCKLESS BLUE 
+Full name:     SUCKLESS BLUE
 Short name:    suckless-blue
 Author:        Zed Kaido
-Website:       https://github.com/zedkaido/suckless-colors 
+Website:       https://github.com/zedkaido/suckless-colors
 Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
-License:       MFL LICENSE 
+License:       MFL LICENSE
 ; }}}
 
 ; Common linked groups {{{
@@ -107,10 +107,10 @@ LineNr               white             blue
 
 Added                black             light_grey        bold
 Changed              white             dark_grey         bold
-Removed              white             red 
+Removed              white             red
 
-DiffAdd              black             light_grey        bold 
-DiffChange           white             dark_grey 
+DiffAdd              black             light_grey        bold
+DiffChange           white             dark_grey
 DiffDelete           white             red
 DiffText             white             dark_grey         bold
 
@@ -119,7 +119,7 @@ EndOfBuffer          white             blue
 ErrorMsg             white             error
 FoldColumn           white             blue
 Folded               white             light_blue        italic
-MatchParen           black             light_grey 
+MatchParen           yellow            black
 ModeMsg              white             blue
 MoreMsg              white             blue
 NonText              magenta           blue
@@ -130,10 +130,10 @@ PmenuThumb           white             blue
 Question             white             blue
 
 Search               black             yellow
-IncSearch            white             black 
+IncSearch            yellow            black
 
 SignColumn           white             blue
-SpecialKey           magenta           blue
+SpecialKey           magenta           black
 SpellBad             white             blue              g=undercurl t=underline s=red
 SpellCap             white             blue
 SpellLocal           white             blue

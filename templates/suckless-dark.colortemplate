@@ -5,9 +5,9 @@
 Full name:     SUCKLESS DARK
 Short name:    suckless-dark
 Author:        Zed Kaido
-Website:       https://github.com/zedkaido/suckless-colors 
+Website:       https://github.com/zedkaido/suckless-colors
 Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
-License:       MFL LICENSE 
+License:       MFL LICENSE
 ; }}}
 
 ; Common linked groups {{{
@@ -105,10 +105,10 @@ LineNr               white             black
 
 Added                black             light_grey        bold
 Changed              white             dark_grey         bold
-Removed              white             red 
+Removed              white             red
 
-DiffAdd              black             light_grey        bold 
-DiffChange           white             dark_grey 
+DiffAdd              black             light_grey        bold
+DiffChange           white             dark_grey
 DiffDelete           white             red
 DiffText             white             dark_grey         bold
 
@@ -128,7 +128,7 @@ PmenuThumb           white             black
 Question             white             black
 
 Search               black             yellow
-IncSearch            white             blue 
+IncSearch            white             blue
 
 SignColumn           white             black
 SpecialKey           magenta           black

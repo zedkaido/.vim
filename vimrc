@@ -10,6 +10,7 @@ colorscheme suckless-blue
 set t_Co=256 # number of colors
 
 set signcolumn=number
+set number
 set relativenumber
 
 set ruler
@@ -66,6 +67,7 @@ set wildignore+=tags,.*.un~,*.pyc
 set incsearch
 set ignorecase
 set smartcase
+set nowrapscan # I wanna know when my search hits the bottom
 
 setglobal path=.,, # avoid unnecessary searches
 set path+=**

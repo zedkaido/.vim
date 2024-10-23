@@ -178,7 +178,7 @@ enddef
 command KMT KMT()
 
 def OSX()
-	edit ~/zk/km/osx-setup.txt
+	edit ~/zk/km/osx_setup.txt
 enddef
 command OSX OSX()
 

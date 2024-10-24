@@ -171,6 +171,11 @@ def KM()
 enddef
 command KM KM()
 
+def JR()
+	edit ~/zk/km/JOURNAL.txt
+enddef
+command JR JR()
+
 def KMT()
 	const path = $HOME .. '/zk/km/' .. Today() .. '.txt'
 	execute 'edit' path

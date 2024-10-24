@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.vifm,vifmrc	set filetype=vifm	
+au BufRead,BufNewFile *.vifm,vifmrc	set filetype=vifm

@@ -64,6 +64,7 @@ set wildignore+=tags,.*.un~,*.pyc
 # --------------------------
 # SECTION: Search | Patterns
 # --------------------------
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase

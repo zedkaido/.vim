@@ -183,6 +183,11 @@ def KMT()
 enddef
 command KMT KMT()
 
+def WEBM()
+	edit ~/zk/km/webmarks.txt
+enddef
+command WEBM WEBM()
+
 def OSX()
 	edit ~/zk/km/osx_setup.txt
 enddef

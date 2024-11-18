@@ -58,7 +58,6 @@ set hidden
 # -------------------------
 set history=1000 
 set wildmenu
-set wildmode=list:longest
 set wildignore+=tags,.*.un~,*.pyc
 
 # --------------------------

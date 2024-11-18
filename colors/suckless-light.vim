@@ -75,14 +75,16 @@ hi CursorColumn guifg=#000000 guibg=#ffffff gui=NONE cterm=NONE
 hi CursorLine guifg=#000000 guibg=NONE gui=NONE cterm=NONE
 hi CursorLineNr guifg=#ffffff guibg=#0000ff gui=NONE cterm=NONE
 hi LineNr guifg=#000000 guibg=#ffffff gui=NONE cterm=NONE
-hi Added guifg=#000000 guibg=#bcbcbc gui=bold cterm=bold
-hi Changed guifg=#000000 guibg=#eeeeee gui=bold cterm=bold
+hi Added guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
+hi Changed guifg=#000000 guibg=#bcbcbc gui=bold cterm=bold
 hi Removed guifg=#ffffff guibg=#870000 gui=NONE cterm=NONE
-hi DiffAdd guifg=#000000 guibg=#bcbcbc gui=bold cterm=bold
-hi DiffChange guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
+hi DiffAdd guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
+hi DiffChange guifg=#000000 guibg=#bcbcbc gui=bold cterm=bold
 hi DiffDelete guifg=#ffffff guibg=#870000 gui=NONE cterm=NONE
-hi DiffText guifg=#000000 guibg=#eeeeee gui=bold cterm=bold
-hi Directory guifg=#000000 guibg=#ffffff gui=bold cterm=bold
+hi DiffText guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
+hi diffAdded guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
+hi diffChanged guifg=#000000 guibg=#bcbcbc gui=bold cterm=bold
+hi diffRemoved guifg=#ffffff guibg=#870000 gui=NONE cterm=NONE
 hi EndOfBuffer guifg=#000000 guibg=#ffffff gui=NONE cterm=NONE
 hi ErrorMsg guifg=#ffffff guibg=#ff0000 gui=NONE cterm=NONE
 hi FoldColumn guifg=#000000 guibg=#ffffff gui=NONE cterm=NONE
@@ -144,14 +146,16 @@ if s:t_Co >= 256
   hi CursorLine ctermfg=16 ctermbg=NONE cterm=NONE
   hi CursorLineNr ctermfg=231 ctermbg=21 cterm=NONE
   hi LineNr ctermfg=16 ctermbg=231 cterm=NONE
-  hi Added ctermfg=16 ctermbg=250 cterm=bold
-  hi Changed ctermfg=16 ctermbg=255 cterm=bold
+  hi Added ctermfg=16 ctermbg=255 cterm=NONE
+  hi Changed ctermfg=16 ctermbg=250 cterm=bold
   hi Removed ctermfg=231 ctermbg=88 cterm=NONE
-  hi DiffAdd ctermfg=16 ctermbg=250 cterm=bold
-  hi DiffChange ctermfg=16 ctermbg=255 cterm=NONE
+  hi DiffAdd ctermfg=16 ctermbg=255 cterm=NONE
+  hi DiffChange ctermfg=16 ctermbg=250 cterm=bold
   hi DiffDelete ctermfg=231 ctermbg=88 cterm=NONE
-  hi DiffText ctermfg=16 ctermbg=255 cterm=bold
-  hi Directory ctermfg=16 ctermbg=231 cterm=bold
+  hi DiffText ctermfg=16 ctermbg=255 cterm=NONE
+  hi diffAdded ctermfg=16 ctermbg=255 cterm=NONE
+  hi diffChanged ctermfg=16 ctermbg=250 cterm=bold
+  hi diffRemoved ctermfg=231 ctermbg=88 cterm=NONE
   hi EndOfBuffer ctermfg=16 ctermbg=231 cterm=NONE
   hi ErrorMsg ctermfg=231 ctermbg=196 cterm=NONE
   hi FoldColumn ctermfg=16 ctermbg=231 cterm=NONE
@@ -216,14 +220,16 @@ if s:t_Co >= 16
   hi CursorLine ctermfg=Black ctermbg=NONE cterm=NONE
   hi CursorLineNr ctermfg=White ctermbg=DarkBlue cterm=NONE
   hi LineNr ctermfg=Black ctermbg=White cterm=NONE
-  hi Added ctermfg=Black ctermbg=LightGrey cterm=bold
+  hi Added ctermfg=Black ctermbg=LightGrey cterm=NONE
   hi Changed ctermfg=Black ctermbg=LightGrey cterm=bold
   hi Removed ctermfg=White ctermbg=DarkRed cterm=NONE
-  hi DiffAdd ctermfg=Black ctermbg=LightGrey cterm=bold
-  hi DiffChange ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi DiffAdd ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi DiffChange ctermfg=Black ctermbg=LightGrey cterm=bold
   hi DiffDelete ctermfg=White ctermbg=DarkRed cterm=NONE
-  hi DiffText ctermfg=Black ctermbg=LightGrey cterm=bold
-  hi Directory ctermfg=Black ctermbg=White cterm=bold
+  hi DiffText ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi diffAdded ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi diffChanged ctermfg=Black ctermbg=LightGrey cterm=bold
+  hi diffRemoved ctermfg=White ctermbg=DarkRed cterm=NONE
   hi EndOfBuffer ctermfg=Black ctermbg=White cterm=NONE
   hi ErrorMsg ctermfg=White ctermbg=DarkRed cterm=NONE
   hi FoldColumn ctermfg=Black ctermbg=White cterm=NONE
@@ -288,14 +294,16 @@ if s:t_Co >= 8
   hi CursorLine ctermfg=Black ctermbg=NONE cterm=NONE
   hi CursorLineNr ctermfg=White ctermbg=DarkBlue cterm=NONE
   hi LineNr ctermfg=Black ctermbg=White cterm=NONE
-  hi Added ctermfg=Black ctermbg=LightGrey cterm=bold
+  hi Added ctermfg=Black ctermbg=LightGrey cterm=NONE
   hi Changed ctermfg=Black ctermbg=LightGrey cterm=bold
   hi Removed ctermfg=White ctermbg=DarkRed cterm=NONE
-  hi DiffAdd ctermfg=Black ctermbg=LightGrey cterm=bold
-  hi DiffChange ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi DiffAdd ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi DiffChange ctermfg=Black ctermbg=LightGrey cterm=bold
   hi DiffDelete ctermfg=White ctermbg=DarkRed cterm=NONE
-  hi DiffText ctermfg=Black ctermbg=LightGrey cterm=bold
-  hi Directory ctermfg=Black ctermbg=White cterm=bold
+  hi DiffText ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi diffAdded ctermfg=Black ctermbg=LightGrey cterm=NONE
+  hi diffChanged ctermfg=Black ctermbg=LightGrey cterm=bold
+  hi diffRemoved ctermfg=White ctermbg=DarkRed cterm=NONE
   hi EndOfBuffer ctermfg=Black ctermbg=White cterm=NONE
   hi ErrorMsg ctermfg=White ctermbg=DarkRed cterm=NONE
   hi FoldColumn ctermfg=Black ctermbg=White cterm=NONE
@@ -351,6 +359,72 @@ if s:t_Co >= 8
 endif
 
 if s:t_Co >= 0
+  hi Normal term=NONE
+  hi Terminal term=NONE
+  hi ColorColumn term=NONE
+  hi Conceal term=NONE
+  hi Cursor term=NONE
+  hi CursorColumn term=NONE
+  hi CursorLine term=NONE
+  hi CursorLineNr term=NONE
+  hi LineNr term=NONE
+  hi Added term=NONE
+  hi Changed term=bold
+  hi Removed term=NONE
+  hi DiffAdd term=NONE
+  hi DiffChange term=bold
+  hi DiffDelete term=NONE
+  hi DiffText term=NONE
+  hi diffAdded term=NONE
+  hi diffChanged term=bold
+  hi diffRemoved term=NONE
+  hi EndOfBuffer term=NONE
+  hi ErrorMsg term=NONE
+  hi FoldColumn term=NONE
+  hi Folded term=italic
+  hi MatchParen term=NONE
+  hi ModeMsg term=NONE
+  hi MoreMsg term=NONE
+  hi NonText term=NONE
+  hi Pmenu term=NONE
+  hi PmenuSbar term=NONE
+  hi PmenuSel term=reverse
+  hi PmenuThumb term=NONE
+  hi Question term=NONE
+  hi Search term=NONE
+  hi IncSearch term=NONE
+  hi SignColumn term=NONE
+  hi SpecialKey term=NONE
+  hi SpellBad term=underline
+  hi SpellCap term=NONE
+  hi SpellLocal term=NONE
+  hi SpellRare term=NONE
+  hi StatusLine term=bold
+  hi StatusLineNC term=NONE
+  hi StatusLineTerm term=bold
+  hi TabLine term=NONE
+  hi TabLineSel term=NONE
+  hi TabLineFill term=NONE
+  hi Title term=NONE
+  hi VertSplit term=NONE
+  hi Visual term=reverse
+  hi VisualNOS term=NONE
+  hi WarningMsg term=NONE
+  hi WildMenu term=bold
+  hi Comment term=NONE
+  hi Constant term=NONE
+  hi Error term=NONE
+  hi Identifier term=NONE
+  hi Ignore term=NONE
+  hi PreProc term=NONE
+  hi Special term=NONE
+  hi Statement term=NONE
+  hi Todo term=NONE
+  hi Type term=NONE
+  hi Underlined term=underline
+  hi CursorIM term=NONE
+  hi ToolbarLine term=NONE
+  hi ToolbarButton term=bold
   hi Normal term=NONE
   hi ColorColumn term=reverse
   hi Conceal term=NONE
@@ -414,6 +488,9 @@ if s:t_Co >= 0
   hi Todo term=bold,reverse
   hi Type term=NONE
   hi Underlined term=underline
+  if !s:italics
+    hi Folded term=NONE
+  endif
   unlet s:t_Co s:italics
   finish
 endif

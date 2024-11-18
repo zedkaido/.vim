@@ -68,10 +68,10 @@ Background: light
 Color: black         rgb(  0,   0,   0)      16          Black
 Color: white         rgb(255, 255, 255)      231         White
 
+Color: silver        rgb(238, 238, 238)      255         LightGrey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey
 Color: grey          rgb(108, 108, 108)      242         DarkGrey
 Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
-Color: silver        rgb(238, 238, 238)      255         LightGrey
 
 Color: red           rgb(135,   0,   0)      88          DarkRed
 Color: green         rgb(135, 255,   0)      118         DarkGreen
@@ -89,7 +89,7 @@ Term colors: black red green yellow blue magenta cyan white
 ; }}}
 
 ; Default highlight groups {{{
-Variant:    gui 256 16 8
+Variant:    gui 256 16 8 0
 
 ; Group              Foreground        Background        Attributes
 Normal               black             white
@@ -103,16 +103,19 @@ CursorLine           black             none
 CursorLineNr         white             blue
 LineNr               black             white
 
-Added                black             light_grey        bold
-Changed              black             silver            bold
+Added                black             silver
+Changed              black             light_grey        bold
 Removed              white             red
 
-DiffAdd              black             light_grey        bold
-DiffChange           black             silver
+DiffAdd              black             silver
+DiffChange           black             light_grey        bold
 DiffDelete           white             red
-DiffText             black             silver            bold
+DiffText             black             silver
 
-Directory            black             white             bold
+diffAdded            black             silver
+diffChanged          black             light_grey        bold
+diffRemoved          white             red
+
 EndOfBuffer          black             white
 ErrorMsg             white             error
 FoldColumn           black             white

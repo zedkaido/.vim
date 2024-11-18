@@ -69,6 +69,7 @@ Background: dark
 Color: black         rgb(  0,   0,   0)      16          Black
 Color: white         rgb(238, 238, 238)      255         White
 
+Color: silver        rgb(208, 208, 208)      252         LightGrey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey
 Color: grey          rgb(148, 148, 148)      246         Grey
 Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
@@ -91,7 +92,7 @@ Term colors: black red green yellow blue magenta cyan white
 ; }}}
 
 ; Default highlight groups {{{
-Variant: gui 256 16 8
+Variant: gui 256 16 8 0
 
 ; Group              Foreground        Background        Attributes
 Normal               white             blue
@@ -105,14 +106,18 @@ CursorLine           white             blue
 CursorLineNr         white             black
 LineNr               white             blue
 
-Added                black             light_grey        bold
-Changed              white             dark_grey         bold
+Added                black             silver
+Changed              white             light_grey         bold
 Removed              white             red
 
-DiffAdd              black             light_grey        bold
-DiffChange           white             dark_grey
+DiffAdd              black             silver
+DiffChange           white             light_grey         bold
 DiffDelete           white             red
 DiffText             white             dark_grey         bold
+
+diffAdded            black             silver
+diffChanged          white             light_grey         bold        
+diffRemoved          white             red
 
 Directory            white             blue              bold
 EndOfBuffer          white             blue

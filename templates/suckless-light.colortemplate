@@ -116,6 +116,7 @@ diffAdded            black             silver
 diffChanged          black             light_grey        bold
 diffRemoved          white             red
 
+Directory            black             white             bold
 EndOfBuffer          black             white
 ErrorMsg             white             error
 FoldColumn           black             white

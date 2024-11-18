@@ -85,6 +85,7 @@ hi DiffText guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
 hi diffAdded guifg=#000000 guibg=#eeeeee gui=NONE cterm=NONE
 hi diffChanged guifg=#000000 guibg=#bcbcbc gui=bold cterm=bold
 hi diffRemoved guifg=#ffffff guibg=#870000 gui=NONE cterm=NONE
+hi Directory guifg=#000000 guibg=#ffffff gui=bold cterm=bold
 hi EndOfBuffer guifg=#000000 guibg=#ffffff gui=NONE cterm=NONE
 hi ErrorMsg guifg=#ffffff guibg=#ff0000 gui=NONE cterm=NONE
 hi FoldColumn guifg=#000000 guibg=#ffffff gui=NONE cterm=NONE
@@ -156,6 +157,7 @@ if s:t_Co >= 256
   hi diffAdded ctermfg=16 ctermbg=255 cterm=NONE
   hi diffChanged ctermfg=16 ctermbg=250 cterm=bold
   hi diffRemoved ctermfg=231 ctermbg=88 cterm=NONE
+  hi Directory ctermfg=16 ctermbg=231 cterm=bold
   hi EndOfBuffer ctermfg=16 ctermbg=231 cterm=NONE
   hi ErrorMsg ctermfg=231 ctermbg=196 cterm=NONE
   hi FoldColumn ctermfg=16 ctermbg=231 cterm=NONE
@@ -230,6 +232,7 @@ if s:t_Co >= 16
   hi diffAdded ctermfg=Black ctermbg=LightGrey cterm=NONE
   hi diffChanged ctermfg=Black ctermbg=LightGrey cterm=bold
   hi diffRemoved ctermfg=White ctermbg=DarkRed cterm=NONE
+  hi Directory ctermfg=Black ctermbg=White cterm=bold
   hi EndOfBuffer ctermfg=Black ctermbg=White cterm=NONE
   hi ErrorMsg ctermfg=White ctermbg=DarkRed cterm=NONE
   hi FoldColumn ctermfg=Black ctermbg=White cterm=NONE
@@ -304,6 +307,7 @@ if s:t_Co >= 8
   hi diffAdded ctermfg=Black ctermbg=LightGrey cterm=NONE
   hi diffChanged ctermfg=Black ctermbg=LightGrey cterm=bold
   hi diffRemoved ctermfg=White ctermbg=DarkRed cterm=NONE
+  hi Directory ctermfg=Black ctermbg=White cterm=bold
   hi EndOfBuffer ctermfg=Black ctermbg=White cterm=NONE
   hi ErrorMsg ctermfg=White ctermbg=DarkRed cterm=NONE
   hi FoldColumn ctermfg=Black ctermbg=White cterm=NONE
@@ -378,6 +382,7 @@ if s:t_Co >= 0
   hi diffAdded term=NONE
   hi diffChanged term=bold
   hi diffRemoved term=NONE
+  hi Directory term=bold
   hi EndOfBuffer term=NONE
   hi ErrorMsg term=NONE
   hi FoldColumn term=NONE
@@ -498,10 +503,10 @@ endif
 " Background: light
 " Color: black         rgb(  0,   0,   0)      16          Black
 " Color: white         rgb(255, 255, 255)      231         White
+" Color: silver        rgb(238, 238, 238)      255         LightGrey
 " Color: light_grey    rgb(188, 188, 188)      250         LightGrey
 " Color: grey          rgb(108, 108, 108)      242         DarkGrey
 " Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
-" Color: silver        rgb(238, 238, 238)      255         LightGrey
 " Color: red           rgb(135,   0,   0)      88          DarkRed
 " Color: green         rgb(135, 255,   0)      118         DarkGreen
 " Color: yellow        rgb(255, 215,   0)      220         DarkYellow

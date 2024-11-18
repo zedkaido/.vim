@@ -3,7 +3,7 @@ vim9script
 # ---------------
 # SECTION: BUFFER
 # ---------------
-syntax on 
+syntax on
 
 # set termguicolors
 colorscheme suckless-blue
@@ -35,11 +35,6 @@ set autoindent
 set backspace=indent,eol,start
 
 set virtualedit=block
-
-# -------------------
-# SECTION: Completion
-# -------------------
-set complete-=i # searching #includes can be slow
 
 # -------------------------
 # SECTION: File persistance
@@ -106,6 +101,11 @@ nnoremap <leader>ll :.!ls -1Fh<CR>
 # --------------
 g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
+# -----------------
+# SECTION: snippets
+# -----------------
+nnoremap ,html :-1read $HOME/.snippets/skeleton.html<CR>3jwf>a
+
 # --------------
 # SECTION: Other
 # --------------
@@ -155,9 +155,9 @@ set viewoptions-=options
 # From `:help :DiffOrig`
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
-# -----------------
-# SECTION: COMMANDS 
-# -----------------
+# ----------------------
+# SECTION: MISC COMMANDS
+# ----------------------
 def Today(): string
 	return strftime('%Y-%m-%d')
 enddef

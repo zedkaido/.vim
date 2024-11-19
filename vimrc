@@ -104,7 +104,7 @@ g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 # -----------------
 # SECTION: snippets
 # -----------------
-nnoremap ,html :-1read $HOME/.snippets/skeleton.html<CR>3jwf>a
+nnoremap <leader>,html :-1read $HOME/.snippets/skeleton.html<CR>3jwf>a
 
 # --------------
 # SECTION: Other

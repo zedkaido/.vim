@@ -79,6 +79,7 @@ vmap > >gv
 
 noremap <F2> :set paste!<CR>:echo &paste<CR>
 
+nnoremap Q :.!sh<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 

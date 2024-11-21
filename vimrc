@@ -96,6 +96,8 @@ nnoremap <leader>tt :set list! \| :echo &list <CR>
 
 nnoremap <leader>ll :.!ls -1Fh<CR>
 
+nnoremap <leader>cd :cd %:p:h<CR>
+
 # --------------
 # SECTION: netrw
 # --------------

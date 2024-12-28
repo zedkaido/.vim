@@ -25,15 +25,6 @@ set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%=%-14.(%l,%c%V%)\ %P\ \笑
 set nowrap
 set linebreak
 
-set tabstop=3
-set softtabstop=3
-set shiftwidth=3
-
-set noexpandtab
-set smarttab
-set autoindent
-set backspace=indent,eol,start
-
 set virtualedit=block
 
 # -------------------------
@@ -59,9 +50,6 @@ set wildignore+=tags,.*.un~,*.pyc
 # SECTION: Search | Patterns
 # --------------------------
 set hlsearch
-set incsearch
-set ignorecase
-set smartcase
 set nowrapscan # I wanna know when my search hits the bottom
 
 setglobal path=.,, # avoid unnecessary searches

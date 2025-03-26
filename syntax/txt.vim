@@ -26,7 +26,7 @@ hi def link codeDefEnd Comment
 syn match txtBold "\*\*[^*]*\*\*"
 hi txtBold term=bold cterm=bold gui=bold
 
-syn match txtItalic "\/\/[^\/]*\/\/"
+syn match txtItalic "\/\/[^\/ ]*\/\/"
 hi txtItalic term=italic cterm=italic gui=italic
 
 syn match txtBacktick "`[^`]*`"

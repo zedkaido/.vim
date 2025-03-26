@@ -18,7 +18,7 @@ syn match txtBlockDefEnd "[\}]|||"
 hi def link txtBlockDefStart Comment
 hi def link txtBlockDefEnd Comment
 
-syn match codeDefStart "|=|.*[\{]$"
+syn match codeDefStart "|=|.*[\{]$" containedin=txtTitle
 syn match codeDefEnd "[\}]|=|.*$"
 hi def link codeDefStart Comment
 hi def link codeDefEnd Comment

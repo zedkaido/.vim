@@ -19,6 +19,6 @@
 [submodule "pack/junegunn/start/goyo.vim"]
 	path = pack/junegunn/start/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
-[submodule "pack/lifepillar/start/vim-colortemplate"]
-	path = pack/lifepillar/start/vim-colortemplate
+[submodule "pack/lifepillar/opt/vim-colortemplate"]
+	path = pack/lifepillar/opt/vim-colortemplate
 	url = https://github.com/lifepillar/vim-colortemplate.git

@@ -1,8 +1,8 @@
 vim9script
 
-# ---------------
-# SECTION: BUFFER
-# ---------------
+# ------
+# BUFFER
+# ------
 syntax on
 
 # set termguicolors
@@ -16,16 +16,22 @@ set relativenumber
 set ruler
 set showcmd
 set listchars=trail:·
+set backspace=indent,eol,start
 
-set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%=%-14.(%l,%c%V%)\ %P\ \笑
+set laststatus=2
+set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P\ \笑
 
-# -----------------------------------
-# SECTION: Text Editing + Indentation
-# -----------------------------------
+# --------------------------
+# Text Editing + Indentation
+# --------------------------
 set nowrap
 set linebreak
-
 set virtualedit=block
+
+# -------------------
+# SECTION: Completion
+# -------------------
+set complete=.,w,b,u,t,i,kspell
 
 # -------------------------
 # SECTION: File persistance
@@ -57,45 +63,10 @@ set path+=**
 set wildignore+=**/node_modules/** 
 set wildignore+=**/build/**
 
-# ----------------
-# SECTION: Keymaps
-# ----------------
-g:mapleader = " "
-
-vmap < <gv
-vmap > >gv
-
-noremap <F2> :set paste!<CR>:echo &paste<CR>
-
-nnoremap Q :.!sh<CR>
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
-nnoremap <leader>gg :vert Git<CR>
-nnoremap <leader>u :UndotreeToggle<CR>
-
-nnoremap <leader>evim :edit $MYVIMRC<CR>
-nnoremap <leader>svim :source $MYVIMRC<CR>
-nnoremap <leader>tw :set wrap!<CR>
-nnoremap <leader>th :set invhlsearch<CR>
-nnoremap <leader>ts :if exists("g:syntax_on") \| syntax off \| else \| syntax enable \| endif<CR>
-nnoremap <leader>tl :set spell!<CR>
-nnoremap <leader>tn :set number! \| :set relativenumber!<CR>
-nnoremap <leader>tt :set list! \| :echo &list <CR>
-
-nnoremap <leader>ll :.!ls -1Fh<CR>
-
-nnoremap <leader>cd :cd %:p:h<CR>
-
 # --------------
 # SECTION: netrw
 # --------------
 g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
-
-# -----------------
-# SECTION: snippets
-# -----------------
-nnoremap <leader>,html :-1read $HOME/.snippets/skeleton.html<CR>3jwf>a
 
 # --------------
 # SECTION: Other
@@ -119,8 +90,8 @@ set formatoptions+=j
 
 # Increase multi-line visual editing speed
 if &ttimeoutlen == -1
-  set ttimeout
-  set ttimeoutlen=100 
+	set ttimeout
+	set ttimeoutlen=100 
 endif
 
 # Replace the check for a tags file in the parent directory of the current
@@ -136,7 +107,7 @@ runtime ftplugin/man.vim
 
 # Persist g:UPPERCASE variables, used by some plugins, in .viminfo.
 if !empty(&viminfo)
-  set viminfo^=!
+	set viminfo^=!
 endif
 
 # Saving options in session and view files causes more problems than it solves
@@ -144,53 +115,10 @@ set sessionoptions-=options
 set viewoptions-=options
 
 # From `:help :DiffOrig`
-command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
-# ----------------------
-# SECTION: MISC COMMANDS
-# ----------------------
-def Today(): string
-	return strftime('%Y-%m-%d')
-enddef
+# ---
 
-def Time(): string
-	return strftime('%H:%M')
-enddef
-
-def KM()
-	edit ~/zk/km
-enddef
-command KM KM()
-
-def JR()
-	edit ~/zk/km/JOURNAL.txt
-enddef
-command JR JR()
-
-def KMT()
-	const path = $HOME .. '/zk/km/' .. Today() .. '.txt'
-	execute 'edit' path
-enddef
-command KMT KMT()
-
-def WEBM()
-	edit ~/zk/km/webmarks.txt
-enddef
-command WEBM WEBM()
-
-def OSX()
-	edit ~/zk/km/osx_setup.txt
-enddef
-command OSX OSX()
-
-def LogDay()
-	@t = Today()
-	normal! "tp
-enddef
-command LogDay LogDay()
-
-def LogTime()
-	@t = "@T:" .. Time() .. ":"
-	normal! "tp
-enddef
-command LogTime LogTime()
+source ~/.vim/keymaps.vim
+source ~/.vim/snippets.vim
+source ~/.vim/cmds.vim

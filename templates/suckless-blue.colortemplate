@@ -7,7 +7,7 @@ Short name:    suckless-blue
 Author:        Zed Kaido
 Website:       https://github.com/zedkaido/suckless-colors
 Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
-License:       MFL LICENSE
+License:       THE LIBERDAD LICENSE 
 ; }}}
 
 ; Common linked groups {{{
@@ -49,7 +49,7 @@ Repeat            -> Statement
 Removed           -> diffRemoved
 SpecialChar       -> Special
 SpecialComment    -> Special
-; StatusLineTerm    -> StatusLine
+StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
 StorageClass      -> Type
 String            -> Constant
@@ -101,22 +101,22 @@ ColorColumn          white             light_blue
 Conceal              none              none
 
 Cursor               black             white
-CursorColumn         white             blue
-CursorLine           white             blue
+CursorColumn         white             black
+CursorLine           black             white             bold
 CursorLineNr         white             black
-LineNr               white             blue
+LineNr               grey              blue
 
 Added                black             silver
-Changed              white             light_grey         bold
+Changed              black             light_grey        bold
 Removed              white             red
 
 DiffAdd              black             silver
-DiffChange           white             light_grey         bold
+DiffChange           white             light_grey        bold
 DiffDelete           white             red
 DiffText             white             dark_grey         bold
 
 diffAdded            black             silver
-diffChanged          white             light_grey         bold        
+diffChanged          black             light_grey        bold
 diffRemoved          white             red
 
 Directory            white             blue              bold
@@ -130,7 +130,7 @@ MoreMsg              white             blue
 NonText              magenta           blue
 Pmenu                white             black
 PmenuSbar            white             blue
-PmenuSel             white             blue              reverse
+PmenuSel             blue              white
 PmenuThumb           white             blue
 Question             white             blue
 
@@ -144,7 +144,7 @@ SpellCap             white             blue
 SpellLocal           white             blue
 SpellRare            white             blue
 
-StatusLine           white             blue              bold
+StatusLine           white             blue
 StatusLineNC         grey              blue
 StatusLineTerm       white             black             bold
 
@@ -154,8 +154,8 @@ TabLineFill          white             blue
 
 Title                white             blue
 VertSplit            white             blue
-Visual               white             blue              reverse
-VisualNOS            white             blue
+Visual               white             black
+VisualNOS            black             white
 WarningMsg           white             blue
 
 WildMenu             white             black             bold

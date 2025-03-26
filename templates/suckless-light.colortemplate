@@ -6,7 +6,7 @@ Short name:    suckless-light
 Author:        Zed Kaido
 Website:       https://github.com/zedkaido/suckless-colors
 Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
-License:       MFL LICENSE
+License:       THE LIBERDAD LICENSE 
 ; }}}
 
 ; Common linked groups {{{
@@ -48,7 +48,7 @@ Removed           -> diffRemoved
 Repeat            -> Statement
 SpecialChar       -> Special
 SpecialComment    -> Special
-; StatusLineTerm    -> StatusLine
+StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
 StorageClass      -> Type
 String            -> Constant
@@ -70,13 +70,13 @@ Color: white         rgb(255, 255, 255)      231         White
 
 Color: silver        rgb(238, 238, 238)      255         LightGrey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey
-Color: grey          rgb(108, 108, 108)      242         DarkGrey
+Color: grey          rgb(108, 108, 108)      242         Grey
 Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
 
 Color: red           rgb(135,   0,   0)      88          DarkRed
 Color: green         rgb(135, 255,   0)      118         DarkGreen
 Color: yellow        rgb(255, 215,   0)      220         DarkYellow
-Color: blue          rgb(  0,   0, 255)      21          DarkBlue
+Color: blue          rgb(  0,   0, 135)      18          DarkBlue
 Color: magenta       rgb(255,   0, 135)      198         DarkMagenta
 Color: cyan          rgb(  0, 255, 215)      50          DarkCyan
 
@@ -98,10 +98,10 @@ ColorColumn          black             silver
 Conceal              none              none
 
 Cursor               white             black
-CursorColumn         black             white
-CursorLine           black             none
+CursorColumn         black             silver
+CursorLine           white             black             bold
 CursorLineNr         white             blue
-LineNr               black             white
+LineNr               grey              white
 
 Added                black             silver
 Changed              black             light_grey        bold
@@ -127,12 +127,12 @@ MoreMsg              black             white
 NonText              magenta           white
 Pmenu                black             silver
 PmenuSbar            black             white
-PmenuSel             black             white             reverse
+PmenuSel             white             black
 PmenuThumb           black             white
 Question             black             white
 
 Search               black             yellow
-IncSearch            white             blue
+IncSearch            yellow            black 
 
 SignColumn           black             white
 SpecialKey           magenta           white
@@ -151,8 +151,8 @@ TabLineFill          black             white
 
 Title                black             white
 VertSplit            black             white
-Visual               black             white             reverse
-VisualNOS            black             white
+Visual               white             blue
+VisualNOS            white             blue
 WarningMsg           black             white
 WildMenu             white             blue              bold
 ; Other conventional group names (see `:help group-name`)
@@ -168,7 +168,7 @@ Todo                 black             cyan
 Type                 black             none
 Underlined           black             none              underline
 ; See `:help CursorIM`
-CursorIM             white             fg
+CursorIM             white             black
 ; See `:help window-toolbar`
 ToolbarLine          none              white
 ToolbarButton        black             white             bold

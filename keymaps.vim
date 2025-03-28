@@ -28,3 +28,5 @@ nnoremap <leader>svim :source $MYVIMRC<CR>
 
 nnoremap <leader>ll :.!ls -1Fh<CR>
 nnoremap <leader>cd :cd %:p:h<CR>
+
+inoremap <M-BS> <C-W>

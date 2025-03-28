@@ -3,7 +3,7 @@ syntax keyword TODO TODO contained
 syn match txtTitle "^\s*:\+ .*[^|||\{]"
 hi txtTitle term=bold cterm=bold gui=bold
 
-syn match txtTAG "#\S\+" containedin=txtTitle
+syn match txtTAG "#[^: ]\+" containedin=txtTitle
 hi def link txtTAG Comment
 
 syn match txtTODO "#TODO" contains=TODO

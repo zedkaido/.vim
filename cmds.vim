@@ -42,7 +42,7 @@ enddef
 command! JR JR()
 
 def KMLog()
-	@t = ":: " .. Day() .. ":@T:" .. Time() .. " |||{\n\n}|||"
+	@t = ":: " .. Day() .. ":@T:" .. Time() .. " |{\n\n}|"
 	normal! "tpji
 enddef
 command! KMLog KMLog()

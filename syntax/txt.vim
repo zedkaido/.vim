@@ -1,6 +1,6 @@
 syntax keyword TODO TODO contained
 
-syn match txtTitle "^\s*:\+ .*[^|||\{]"
+syn match txtTitle "^\s*:\+ .*[^|\{]"
 hi txtTitle term=bold cterm=bold gui=bold
 
 syn match txtTAG "#[^: ]\+" containedin=txtTitle
@@ -13,8 +13,8 @@ syn match txtComment "\/\/ .*$" contains=TODO
 hi def link txtComment Comment 
 hi def link txtCommentAlt Comment
 
-syn match txtBlockDefStart "|||.*[\{]"
-syn match txtBlockDefEnd "[\}]|||"
+syn match txtBlockDefStart "|.*[\{]"
+syn match txtBlockDefEnd "[\}]|"
 hi def link txtBlockDefStart Comment
 hi def link txtBlockDefEnd Comment
 

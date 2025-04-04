@@ -24,7 +24,7 @@ set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)
 # --------------------------
 # Text Editing + Indentation
 # --------------------------
-set nowrap
+set wrap
 set linebreak
 set virtualedit=block
 

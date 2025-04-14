@@ -82,9 +82,6 @@ set nolangremap
 # Automatically detect files
 filetype plugin indent on
 
-# Prevent automatic line inserts with `o`
-autocmd FileType * setlocal formatoptions-=o 
-
 # Delete comment character when joining commented lines.
 set formatoptions+=j 
 

@@ -119,3 +119,6 @@ command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincm
 source ~/.vim/keymaps.vim
 source ~/.vim/snippets.vim
 source ~/.vim/cmds.vim
+
+# fix: "vimrc" file comments 
+autocmd BufWinEnter vimrc setlocal commentstring=#\ %s

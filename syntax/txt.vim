@@ -11,17 +11,16 @@ hi def link txtTODO Comment
 
 syn match txtComment "\/\/ .*$" contains=TODO
 hi def link txtComment Comment 
-hi def link txtCommentAlt Comment
 
 syn match txtBlockDefStart "|.*[\{]"
 syn match txtBlockDefEnd "[\}]|"
 hi def link txtBlockDefStart Comment
 hi def link txtBlockDefEnd Comment
 
-syn match codeDefStart "|=|.*[\{]$" containedin=txtTitle
-syn match codeDefEnd "[\}]|=|.*$"
-hi def link codeDefStart Comment
-hi def link codeDefEnd Comment
+syn match txtCodeDefStart "|=|.*[\{]$" containedin=txtTitle
+syn match txtCodeDefEnd "[\}]|=|.*$"
+hi def link txtCodeDefStart Comment
+hi def link txtCodeDefEnd Comment
 
 syn match txtBold "\*\*[^*]*\*\*"
 hi txtBold term=bold cterm=bold gui=bold

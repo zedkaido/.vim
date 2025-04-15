@@ -67,11 +67,11 @@ def KMNote()
 enddef
 command! KMNote KMNote()
 
-def TSKs()
+def TSKS()
 	cd ~/zk/km
 	edit ~/zk/km/tasks.index.txt
 enddef
-command! TSKs TSKs()
+command! TSKS TSKS()
 
 def TSKNew()
 	var taskID = ID(3)

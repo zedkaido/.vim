@@ -13,3 +13,4 @@ setlocal commentstring=//\ %s
 autocmd BufWinEnter *.txt setlocal commentstring=//\ %s
 
 setlocal foldmethod=marker
+setlocal foldmarker=\|{,}\|

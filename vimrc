@@ -57,6 +57,8 @@ set wildignore+=tags,.*.un~,*.pyc
 # --------------------------
 set hlsearch
 set nowrapscan # I wanna know when my search hits the bottom
+set ignorecase
+set smartcase
 
 setglobal path=.,, # avoid unnecessary searches
 set path+=**

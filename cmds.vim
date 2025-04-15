@@ -7,6 +7,18 @@ command! OSX OSX()
 
 # ---
 
+def ID(length: number = 4): string
+	var command: string = 'openssl rand -hex ' .. length .. " | tr -d '\n'"
+	var result: string = system(command)
+	return result
+enddef
+
+def PUTID(length: number = 3)
+	@i = ID(length)
+	normal! "ip
+enddef
+command! -nargs=? PUTID :call PUTID(<f-args>)
+
 def Time(): string
 	return strftime("%H:%M")
 enddef
@@ -54,6 +66,31 @@ def KMNote()
 	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>"
 enddef
 command! KMNote KMNote()
+
+def TSKs()
+	cd ~/zk/km
+	edit ~/zk/km/tasks.index.txt
+enddef
+command! TSKs TSKs()
+
+def TSKNew()
+	var taskID = ID(3)
+	execute "normal! o[ ] :: #" .. taskID "\<Esc>Bh"
+enddef
+command! TSKNew :call TSKNew()
+
+def TSKArchive()
+	cd ~/zk/km
+	edit ~/zk/km/tasks.archive.txt
+enddef
+command! TSKArchive TSKArchive()
+
+def ARCTSK(line1: number, line2: number)
+	var selection = getline(line1, line2)
+	writefile(selection, expand("~/zk/km/tasks.archive.txt"), 'a')
+	execute $":{line1},{line2}d"
+enddef
+command! -range ARCTSK :call ARCTSK(<line1>, <line2>)
 
 command! -nargs=1 KMGrep vimgrep "<args>" ~/zk/km/**/*.txt 
 

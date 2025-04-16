@@ -78,6 +78,7 @@ command! TSKS TSKS()
 
 def TSKNew()
 	var taskID = ID(3)
+	@t = taskID
 	execute "normal! o[ ] :: #" .. taskID "\<Esc>Bh"
 enddef
 command! TSKNew :call TSKNew()

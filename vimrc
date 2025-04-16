@@ -78,6 +78,8 @@ set autoread # files
 # --------------------------
 # SECTION: Sensible Defaults
 # --------------------------
+g:is_bash = 1 #bash baby bash
+
 # Disable a legacy behavior that can break plugin maps.
 set nolangremap
 

@@ -66,7 +66,7 @@ def KMNote()
 	cd ~/zk/km
 	const jr_path = "~/zk/km/journal/" .. Year() .. ".txt"
 	execute "edit " .. jr_path 
-	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>"
+	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kzoci{"
 enddef
 command! KMNote KMNote()
 

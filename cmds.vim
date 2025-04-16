@@ -22,18 +22,21 @@ command! -nargs=? PUTID :call PUTID(<f-args>)
 def Time(): string
 	return strftime("%H:%M")
 enddef
-def Day(): string
+def Date(): string
 	return strftime("%Y-%m-%d")
+enddef
+def DateTime(): string
+	return strftime("%Y-%m-%d:%H:%M")
 enddef
 def Year(): string
 	return strftime("%Y")
 enddef
 
-def LogDay()
-	@t = Day()
+def LogDate()
+	@t = Date()
 	normal! "tp
 enddef
-command! LogDay LogDay()
+command! LogDay LogDate()
 
 def LogTime()
 	@t = "@T:" .. Time()
@@ -54,7 +57,7 @@ enddef
 command! JR JR()
 
 def KMLog()
-	@t = ":: " .. Day() .. ":@T:" .. Time() .. " |{\n\n}|"
+	@t = ":: " .. Date() .. ":@T:" .. Time() .. " |{\n\n}|"
 	normal! "tpji
 enddef
 command! KMLog KMLog()
@@ -87,6 +90,10 @@ command! TSKArchive TSKArchive()
 
 def ARCTSK(line1: number, line2: number)
 	var selection = getline(line1, line2)
+
+	var date_str = DateTime()
+	selection = map(selection, (_, line): string => '(' .. date_str .. ') ' .. line)
+
 	writefile(selection, expand("~/zk/km/tasks.archive.txt"), 'a')
 	execute $":{line1},{line2}d"
 enddef

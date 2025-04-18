@@ -93,10 +93,11 @@ def ARCTSK(line1: number, line2: number)
 	var selection = getline(line1, line2)
 
 	var date_str = DateTime()
-	selection = map(selection, (_, line): string => '(' .. date_str .. ') ' .. line)
+	@a = join(map(selection, (_, line): string => '(' .. date_str .. ') ' .. line), "\n")
 
-	writefile(selection, expand("~/zk/km/tasks.archive.txt"), 'a')
 	execute $":{line1},{line2}d"
+	execute "edit ~/zk/km/tasks.archive.txt"
+	execute "normal! gg)o\<Esc>\"ap"
 enddef
 command! -range ARCTSK :call ARCTSK(<line1>, <line2>)
 

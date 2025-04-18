@@ -29,4 +29,7 @@ nnoremap <leader>svim :source $MYVIMRC<CR>
 nnoremap <leader>ll :.!ls -1Fh<CR>
 nnoremap <leader>cd :cd %:p:h<CR>
 
+# get syntax group name of text under cursor
+nnoremap <leader>hs :echo synIDattr(synID(line('.'), col('.'), 1), 'name')<CR>
+
 inoremap <M-BS> <C-W>

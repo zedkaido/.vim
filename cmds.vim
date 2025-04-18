@@ -78,10 +78,10 @@ command! TSKS TSKS()
 
 def TSKNew()
 	var taskID = ID(3)
-	@t = taskID
+	@c = "#" .. taskID # `c` :: for current task
 	execute "normal! o[ ] :: #" .. taskID "\<Esc>Bh"
 enddef
-command! TSKNew :call TSKNew()
+command! TSKNew TSKNew()
 
 def TSKArchive()
 	cd ~/zk/km
@@ -99,7 +99,7 @@ def ARCTSK(line1: number, line2: number)
 	execute "edit ~/zk/km/tasks.archive.txt"
 	execute "normal! gg)o\<Esc>\"ap"
 enddef
-command! -range ARCTSK :call ARCTSK(<line1>, <line2>)
+command! -range ARCTSK ARCTSK(<line1>, <line2>)
 
 command! -nargs=1 KMGrep vimgrep "<args>" ~/zk/km/**/*.txt 
 

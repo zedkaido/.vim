@@ -89,6 +89,9 @@ filetype plugin indent on
 # Delete comment character when joining commented lines.
 set formatoptions+=j 
 
+# consider-this-a-keyword 
+set iskeyword+=\-
+
 # Increase multi-line visual editing speed
 if &ttimeoutlen == -1
 	set ttimeout

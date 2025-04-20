@@ -72,12 +72,13 @@ Color: white         rgb(238, 238, 238)      255         White
 Color: silver        rgb(208, 208, 208)      252         LightGrey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey
 Color: grey          rgb(148, 148, 148)      246         Grey
-Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
+Color: dark_grey     rgb( 28,  28,  28)      234         DarkGrey
 
 Color: red           rgb(135,   0,   0)      88          DarkRed
 Color: green         rgb(135, 255,   0)      118         DarkGreen
 Color: yellow        rgb(255, 215,   0)      220         DarkYellow
 Color: blue          rgb(  0,   0, 135)      18          Blue
+Color: dark_blue     rgb(  0,   0,  95)      17          DarkBlue
 Color: magenta       rgb(255,   0, 135)      198         DarkMagenta
 Color: cyan          rgb(  0, 255, 215)      50          DarkCyan
 
@@ -113,7 +114,7 @@ DiffChange           white             light_grey        bold
 DiffDelete           white             red
 DiffText             white             light_grey
 
-diffAdded            black             silver
+diffAdded            white             dark_grey
 diffChanged          white             light_grey        bold
 diffRemoved          white             red
 
@@ -121,8 +122,8 @@ Directory            white             black             bold
 EndOfBuffer          white             black
 ErrorMsg             white             error
 FoldColumn           white             black
-Folded               white             dark_grey         italic
-MatchParen           white             dark_grey
+Folded               white             dark_blue
+MatchParen           yellow            dark_grey
 ModeMsg              white             black
 MoreMsg              white             black
 NonText              magenta           black
@@ -152,14 +153,14 @@ TabLineFill          white             black
 
 Title                white             black
 VertSplit            white             black
-Visual               white             blue             
+Visual               white             blue
 VisualNOS            white             blue
 WarningMsg           white             black
 
 WildMenu             white             blue              bold
 ; Other conventional group names (see `:help group-name`)
 Comment              grey              none
-Constant             white             none
+Constant             grey              none
 Error                white             error
 
 Identifier           white             none

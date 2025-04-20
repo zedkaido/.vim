@@ -120,7 +120,7 @@ Directory            black             white             bold
 EndOfBuffer          black             white
 ErrorMsg             white             error
 FoldColumn           black             white
-Folded               black             silver            italic
+Folded               black             silver
 MatchParen           black             silver
 ModeMsg              black             white
 MoreMsg              black             white
@@ -157,7 +157,7 @@ WarningMsg           black             white
 WildMenu             white             blue              bold
 ; Other conventional group names (see `:help group-name`)
 Comment              grey              none
-Constant             black             none
+Constant             grey              none
 Error                white             error
 Identifier           black             none
 Ignore               black             none

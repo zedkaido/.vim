@@ -5,7 +5,12 @@ def OSX()
 enddef
 command! OSX OSX()
 
-# ---
+def TAB(len: string = '8')
+	var n = str2nr(len)
+	execute "set tabstop=" .. n
+	execute "set shiftwidth=" .. n
+enddef
+command! -nargs=? TAB TAB(<f-args>)
 
 def ID(len: number = 4): string
 	var command: string = 'openssl rand -hex ' .. len .. " | tr -d '\n'"

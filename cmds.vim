@@ -7,17 +7,17 @@ command! OSX OSX()
 
 # ---
 
-def ID(length: number = 4): string
-	var command: string = 'openssl rand -hex ' .. length .. " | tr -d '\n'"
+def ID(len: number = 4): string
+	var command: string = 'openssl rand -hex ' .. len .. " | tr -d '\n'"
 	var result: string = system(command)
 	return result
 enddef
 
-def PUTID(length: number = 3)
-	@i = ID(length)
+def PUTID(length: string = "3")
+	@i = ID(str2nr(length))
 	normal! "ip
 enddef
-command! -nargs=? PUTID :call PUTID(<f-args>)
+command! -nargs=? PUTID PUTID(<f-args>)
 
 def Time(): string
 	return strftime("%H:%M")

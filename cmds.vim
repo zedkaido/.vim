@@ -7,8 +7,8 @@ command! OSX OSX()
 
 def TAB(len: string = '8')
 	var n = str2nr(len)
-	execute "set tabstop=" .. n
-	execute "set shiftwidth=" .. n
+	execute "bufdo set tabstop=" .. n
+	execute "bufdo set shiftwidth=" .. n
 enddef
 command! -nargs=? TAB TAB(<f-args>)
 

@@ -3,7 +3,7 @@ vim9script
 # ------
 # BUFFER
 # ------
-syntax on
+syntax off
 
 # set termguicolors
 colorscheme suckless-blue

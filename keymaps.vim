@@ -16,7 +16,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 
 nnoremap <leader>tw :set wrap!<CR>
 nnoremap <leader>th :set invhlsearch<CR>
-nnoremap <leader>tx :if exists("g:syntax_on") \| syntax off \| else \| syntax enable \| endif<CR>
+nnoremap <leader>tx :if exists("g:syntax_on") \| syntax off \| else \| syntax on \| endif<CR>
 nnoremap <leader>ts :set spell!<CR>
 nnoremap <leader>tn :set number! \| :set relativenumber!<CR>
 nnoremap <leader>tt :set list! \| :echo &list <CR>

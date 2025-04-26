@@ -71,7 +71,7 @@ Color: white         rgb(238, 238, 238)      255         White
 
 Color: silver        rgb(208, 208, 208)      252         LightGrey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey
-Color: grey          rgb(148, 148, 148)      246         Grey
+Color: grey          rgb(158, 158, 158)      247         Grey
 Color: dark_grey     rgb( 28,  28,  28)      234         DarkGrey
 
 Color: red           rgb(135,   0,   0)      88          DarkRed

@@ -70,9 +70,7 @@ Color: black         rgb(  0,   0,   0)      16          Black
 Color: white         rgb(238, 238, 238)      255         White
 
 Color: silver        rgb(208, 208, 208)      252         LightGrey
-Color: light_grey    rgb(188, 188, 188)      250         LightGrey
-Color: grey          rgb(148, 148, 148)      246         Grey
-Color: dark_grey     rgb( 38,  38,  38)      235         DarkGrey
+Color: grey          rgb(178, 178, 178)      249         Grey
 
 Color: red           rgb(135,   0,   0)      88          DarkRed
 Color: green         rgb(135, 255,   0)      118         DarkGreen
@@ -106,16 +104,16 @@ CursorLineNr         white             black
 LineNr               grey              blue
 
 Added                black             silver
-Changed              black             light_grey        bold
+Changed              black             grey              bold
 Removed              white             red
 
 DiffAdd              black             silver
-DiffChange           white             light_grey        bold
+DiffChange           white             grey              bold
 DiffDelete           white             red
-DiffText             white             dark_grey         bold
+DiffText             white             dark_blue         bold
 
 diffAdded            white             dark_blue
-diffChanged          black             light_grey        bold
+diffChanged          black             grey              bold
 diffRemoved          white             red
 
 Directory            white             blue              bold

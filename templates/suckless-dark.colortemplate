@@ -67,7 +67,7 @@ Background: dark
 ; Color palette {{{
 ; Color name         GUI                     Base256     Base16 (optional)
 Color: black         rgb(  0,   0,   0)      16          Black
-Color: white         rgb(238, 238, 238)      255         White
+Color: white         rgb(208, 208, 208)      252         White
 
 Color: silver        rgb(208, 208, 208)      252         LightGrey
 Color: light_grey    rgb(188, 188, 188)      250         LightGrey

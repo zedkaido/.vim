@@ -103,17 +103,17 @@ CursorLine           black             white             bold
 CursorLineNr         white             black
 LineNr               grey              blue
 
-Added                black             silver
-Changed              black             grey              bold
+Added                white             dark_blue
+Changed              white             dark_blue         bold
 Removed              white             red
 
-DiffAdd              black             silver
-DiffChange           white             grey              bold
+DiffAdd              white             dark_blue
+DiffChange           white             blue
 DiffDelete           white             red
-DiffText             white             dark_blue         bold
+DiffText             white             dark_blue
 
 diffAdded            white             dark_blue
-diffChanged          black             grey              bold
+diffChanged          white             dark_blue         bold
 diffRemoved          white             red
 
 Directory            white             blue              bold

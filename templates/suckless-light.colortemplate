@@ -104,16 +104,16 @@ CursorLineNr         white             blue
 LineNr               grey              white
 
 Added                black             silver
-Changed              black             light_grey        bold
+Changed              black             silver            bold
 Removed              white             red
 
 DiffAdd              black             silver
-DiffChange           black             light_grey        bold
+DiffChange           black             white
 DiffDelete           white             red
 DiffText             black             silver
 
 diffAdded            black             silver
-diffChanged          black             light_grey        bold
+diffChanged          black             silver            bold
 diffRemoved          white             red
 
 Directory            black             white             bold
@@ -132,7 +132,7 @@ PmenuThumb           black             white
 Question             black             white
 
 Search               black             yellow
-IncSearch            yellow            black 
+IncSearch            yellow            black
 
 SignColumn           black             white
 SpecialKey           magenta           white

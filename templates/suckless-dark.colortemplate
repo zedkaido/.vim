@@ -109,13 +109,13 @@ Added                black             silver
 Changed              white             light_grey        bold
 Removed              white             red
 
-DiffAdd              black             silver 
-DiffChange           white             light_grey        bold
+DiffAdd              white             dark_grey
+DiffChange           white             black
 DiffDelete           white             red
-DiffText             white             light_grey
+DiffText             white             dark_grey
 
 diffAdded            white             dark_grey
-diffChanged          white             light_grey        bold
+diffChanged          white             dark_grey         bold
 diffRemoved          white             red
 
 Directory            white             black             bold

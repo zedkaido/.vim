@@ -61,7 +61,6 @@ set ignorecase
 set smartcase
 
 setglobal path=.,, # avoid unnecessary searches
-set path+=**
 set wildignore+=**/node_modules/** 
 set wildignore+=**/build/**
 

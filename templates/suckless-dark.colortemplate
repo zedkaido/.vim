@@ -1,26 +1,38 @@
 ; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
 
-; Information {{{
-; Mandatory
-Full name:     SUCKLESS DARK
-Short name:    suckless-dark
-Author:        Zed Kaido
-Website:       https://github.com/zedkaido/suckless-colors
-Description:   NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
-License:       THE LIBERDAD LICENSE 
-; }}}
+; =========================
+; VERSION: colortemplate-v3
+; =========================
 
-; Common linked groups {{{
-; Other conventional group names (see `:help group-name`)
+Full name: SUCKLESS DARK
+Short name: suckless-dark
+Environments: gui 256 8 0
+Author: Zed Kaido
+
+Maintainer: Zed Kaido
+URL: https://github.com/zedkaido/suckless-colors
+Description: NO COLORS | NO SYNTAX-HIGHLIGHTING | 100% READABILITY
+License: THE LIBERDAD LICENSE
+
+Options: backend=vim9 ; generate vim9 script (default)
+Options: palette=true ; append color palette to the output (as comment)
+
+Prefix: sd
+Background: dark
+
 Added             -> diffAdded
+Changed           -> diffChanged
+Removed           -> diffRemoved
 Boolean           -> Constant
 Character         -> Constant
-Changed           -> diffChanged
+ComplMatchIns     -> Normal
 Conditional       -> Statement
 CurSearch         -> IncSearch
 CursorLineFold    -> FoldColumn
 CursorLineSign    -> SignColumn
 Debug             -> Special
+debugPC           -> SignColumn
+debugBreakpoint   -> SignColumn
 Define            -> PreProc
 Delimiter         -> Special
 Exception         -> Statement
@@ -35,6 +47,7 @@ Macro             -> PreProc
 MessageWindow     -> WarningMsg
 Number            -> Constant
 Operator          -> Statement
+PmenuBorder       -> Pmenu
 PmenuKind         -> Pmenu
 PmenuKindSel      -> PmenuSel
 PmenuExtra        -> Pmenu
@@ -44,56 +57,49 @@ PmenuMatchSel     -> PmenuSel
 PopupNotification -> WarningMsg
 PopupSelected     -> PmenuSel
 PreCondit         -> PreProc
+PreInsert         -> NonText
 QuickFixLine      -> Search
 Repeat            -> Statement
-Removed           -> diffRemoved
 SpecialChar       -> Special
 SpecialComment    -> Special
-StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
 StorageClass      -> Type
 String            -> Constant
 Structure         -> Type
 Tag               -> Special
 Typedef           -> Type
-debugBreakpoint   -> SignColumn
-debugPC           -> SignColumn
-; See `:help lCursor`
 lCursor           -> Cursor
-; }}}
 
-Background: dark
 
-; Color palette {{{
-; Color name         GUI                     Base256     Base16 (optional)
-Color: black         rgb(  0,   0,   0)      16          Black
-Color: white         rgb(208, 208, 208)      252         White
+; =============================================================
+; Color name         GUI               Base256           Base16
+; =============================================================
+Color: black         #000000           16                Black
+Color: white         #d0d0d0           252               White
 
-Color: silver        rgb(208, 208, 208)      252         LightGrey
-Color: light_grey    rgb(188, 188, 188)      250         LightGrey
-Color: grey          rgb(158, 158, 158)      247         Grey
-Color: dark_grey     rgb( 28,  28,  28)      234         DarkGrey
+Color: silver        #d0d0d0           252               LightGrey
+Color: light_grey    #bcbcbc           250               LightGrey
+Color: grey          #9e9e9e           247               Grey
+Color: dark_grey     #1c1c1c           234               DarkGrey
 
-Color: red           rgb(135,   0,   0)      88          DarkRed
-Color: green         rgb(135, 255,   0)      118         DarkGreen
-Color: yellow        rgb(255, 215,   0)      220         DarkYellow
-Color: blue          rgb(  0,   0, 135)      18          Blue
-Color: dark_blue     rgb(  0,   0,  95)      17          DarkBlue
-Color: magenta       rgb(255,   0, 135)      198         DarkMagenta
-Color: cyan          rgb(  0, 255, 215)      50          DarkCyan
+Color: red           #870000           88                DarkRed
+Color: green         #87ff00           118               DarkGreen
+Color: yellow        #ffd700           220               DarkYellow
+Color: blue          #000087           18                Blue
+Color: dark_blue     #00005f           17                DarkBlue
+Color: magenta       #ff0087           198               DarkMagenta
+Color: cyan          #00ffd7           50                DarkCyan
 
-Color: error         rgb(255,   0,   0)      196         DarkRed
-; }}}
+Color: error         #ff0000           196               DarkRed
 
-; Terminal colors {{{
-Term colors: black red green yellow blue magenta cyan white
-Term colors: black red green yellow blue magenta cyan white
-; }}}
 
-; Default highlight groups {{{
-Variant: gui 256 16 8 0
+Term colors: black red black yellow black black black white
+             black red black yellow black black black white
 
+
+; =================================================================
 ; Group              Foreground        Background        Attributes
+; =================================================================
 Normal               white             black
 Terminal             white             black
 ColorColumn          white             dark_grey
@@ -101,13 +107,9 @@ Conceal              none              none
 
 Cursor               black             white
 CursorColumn         white             black
-CursorLine           black             white             bold
+CursorLine           black             white
 CursorLineNr         white             blue
 LineNr               grey              black
-
-Added                black             silver
-Changed              white             light_grey        bold
-Removed              white             red
 
 DiffAdd              white             dark_grey
 DiffChange           white             black
@@ -138,27 +140,28 @@ IncSearch            yellow            blue
 
 SignColumn           white             black
 SpecialKey           magenta           black
-SpellBad             white             black             g=undercurl t=underline s=red
+SpellBad             white             black             s=red underline
+    /gui             white             black             s=red undercurl
 SpellCap             white             black
 SpellLocal           white             black
 SpellRare            white             black
 
 StatusLine           white             black             bold
-StatusLineNC         grey              black
 StatusLineTerm       white             blue              bold
+StatusLineNC         grey              black
 
 TabLine              white             black
 TabLineSel           white             blue              bold
 TabLineFill          white             black
 
-Title                white             black
+Title                white             black             bold
 VertSplit            white             black
 Visual               white             blue
 VisualNOS            white             blue
 WarningMsg           white             black
 
 WildMenu             white             blue              bold
-; Other conventional group names (see `:help group-name`)
+
 Comment              grey              none
 Constant             grey              none
 Error                white             error
@@ -171,17 +174,9 @@ Statement            white             none
 Todo                 black             cyan
 Type                 white             none
 Underlined           white             none              underline
-; See `:help CursorIM`
 CursorIM             none              fg
-; See `:help window-toolbar`
+
 ToolbarLine          none              black
 ToolbarButton        white             black             bold
-; }}}
 
-; Additional highlight groups {{{
-; Add additional highlight groups here if you want
-; }}}
-
-; B/W variant {{{
-Include: _tcozero
-; }}}
+Include: _bw.colortemplate

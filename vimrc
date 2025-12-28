@@ -27,6 +27,7 @@ set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)
 set wrap
 set linebreak
 set virtualedit=block
+set copyindent
 
 # -------------------
 # SECTION: Completion

@@ -1,3 +1,4 @@
 .udir/**
 *.backup
 .vim-devel
+.DS_Store

@@ -78,7 +78,7 @@ lCursor           -> Cursor
 Color: black         #000000           16                Black
 Color: white         #ffffff           231               White
 
-Color: silver        #eeeeee           255               LightGrey
+Color: silver        #fafafa           255               LightGrey
 Color: light_grey    #bcbcbc           250               LightGrey
 Color: grey          #6c6c6c           242               Grey
 Color: dark_grey     #262626           235               DarkGrey
@@ -122,7 +122,7 @@ diffRemoved          white             red
 
 Directory            black             white             bold
 EndOfBuffer          black             white
-ErrorMsg             white             error
+ErrorMsg             white             error             bold
 FoldColumn           black             white
 Folded               black             silver
 MatchParen           black             silver
@@ -139,14 +139,14 @@ Search               black             yellow
 IncSearch            yellow            black
 
 SignColumn           black             white
-SpecialKey           magenta           white
+SpecialKey           dark_grey         silver
 SpellBad             black             white             s=red underline
     /gui             white             black             s=red undercurl
 SpellCap             black             white
 SpellLocal           black             white
 SpellRare            black             white
 
-StatusLine           black             white             bold
+StatusLine           black             silver            bold
 StatusLineTerm       white             blue              bold
 StatusLineNC         grey              white
 
@@ -163,8 +163,8 @@ WarningMsg           black             white
 WildMenu             white             blue              bold
 
 Comment              grey              none
-Constant             grey              none
-Error                white             error
+Constant             black             none
+Error                white             error             bold
 
 Identifier           black             none
 Ignore               black             none

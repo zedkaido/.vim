@@ -120,7 +120,7 @@ diffRemoved          white             red
 
 Directory            white             blue              bold
 EndOfBuffer          white             blue
-ErrorMsg             white             error
+ErrorMsg             white             error             bold
 FoldColumn           white             blue
 Folded               white             dark_blue
 MatchParen           yellow            black
@@ -137,14 +137,14 @@ Search               black             yellow
 IncSearch            yellow            black
 
 SignColumn           white             blue
-SpecialKey           magenta           black
+SpecialKey           grey              dark_blue
 SpellBad             white             blue              s=red underline
     /gui             white             blue              s=red undercurl
 SpellCap             white             blue
 SpellLocal           white             blue
 SpellRare            white             blue
 
-StatusLine           white             blue              bold
+StatusLine           white             dark_blue         bold
 StatusLineTerm       white             black             bold
 StatusLineNC         grey              blue
 
@@ -161,8 +161,8 @@ WarningMsg           white             blue
 WildMenu             white             black             bold
 
 Comment              grey              none
-Constant             grey              none
-Error                white             error
+Constant             white             none
+Error                white             error             bold
 
 Identifier           white             none
 Ignore               white             none

@@ -5,9 +5,9 @@ vim9script
 # ------
 syntax off
 
-# set termguicolors
-colorscheme suckless-blue
-set t_Co=256 # number of colors
+set termguicolors
+set t_Co=256
+colorscheme suckless-dark
 
 set signcolumn=number
 set number

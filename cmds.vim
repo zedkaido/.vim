@@ -1,7 +1,7 @@
 vim9script
 
 def OSX()
-	edit ~/zk/km/software/osx/osx_setup.txt
+	edit ~/zk/km/software/osx/osx.txt
 enddef
 command! OSX OSX()
 

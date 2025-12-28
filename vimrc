@@ -15,7 +15,7 @@ set relativenumber
 
 set ruler
 set showcmd
-set listchars=trail:·
+set listchars=tab:⇥\ ,trail:·,extends:>,precedes:<
 set backspace=indent,eol,start
 
 set laststatus=2

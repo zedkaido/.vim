@@ -48,7 +48,7 @@ set hidden
 # -------------------------
 # SECTION: CMD Line Editing
 # -------------------------
-set history=1000 
+set history=1000
 set wildmenu
 set wildignore+=tags,.*.un~,*.pyc
 
@@ -61,7 +61,7 @@ set ignorecase
 set smartcase
 
 setglobal path=.,, # avoid unnecessary searches
-set wildignore+=**/node_modules/** 
+set wildignore+=**/node_modules/**
 set wildignore+=**/build/**
 
 # --------------
@@ -86,23 +86,23 @@ set nolangremap
 filetype plugin indent on
 
 # Delete comment character when joining commented lines.
-set formatoptions+=j 
+set formatoptions+=j
 
-# consider-this-a-keyword 
+# consider-this-a-keyword
 set iskeyword+=\-
 
 # Increase multi-line visual editing speed
 if &ttimeoutlen == -1
 	set ttimeout
-	set ttimeoutlen=100 
+	set ttimeoutlen=100
 endif
 
 # Replace the check for a tags file in the parent directory of the current
 # file with a check in every ancestor directory.
 # if has('path_extra') && (',' . g:tags . ',') =~# ',\./tags,'
-#   set tags-=./tags
-#   set tags-=./tags
-#   set tags^=./tags
+# 	set tags-=./tags
+# 	set tags-=./tags
+# 	set tags^=./tags
 # endif
 
 # Enable the :Man command shipped inside Vim's man filetype plugin.
@@ -126,5 +126,5 @@ source ~/.vim/keymaps.vim
 source ~/.vim/snippets.vim
 source ~/.vim/cmds.vim
 
-# fix: "vimrc" file comments 
+# fix: "vimrc" file comments
 autocmd BufWinEnter vimrc setlocal commentstring=#\ %s

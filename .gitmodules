@@ -19,3 +19,9 @@
 [submodule "pack/plugins/opt/vim-goyo"]
 	path = pack/plugins/opt/vim-goyo
 	url = git@github.com:junegunn/goyo.vim.git
+[submodule "pack/plugins/opt/vim-dadbod"]
+	path = pack/plugins/opt/vim-dadbod
+	url = git@github.com:tpope/vim-dadbod
+[submodule "pack/plugins/opt/vim-speeddating"]
+	path = pack/plugins/opt/vim-speeddating
+	url = git@github.com:tpope/vim-speeddating

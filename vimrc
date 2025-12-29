@@ -51,7 +51,6 @@ set hidden
 # -------------------------
 set history=1000
 set wildmenu
-set wildignore+=tags,.*.un~,*.pyc
 
 # --------------------------
 # SECTION: Search | Patterns
@@ -62,8 +61,10 @@ set ignorecase
 set smartcase
 
 setglobal path=.,, # avoid unnecessary searches
-set wildignore+=**/node_modules/**
-set wildignore+=**/build/**
+
+set wildignore+=*/.git/*
+set wildignore+=*/node_modules/*,*/build/*,*/target/*,*/min/*
+set wildignore+=tags,*.swp,*.swo,*.DS_Store
 
 # --------------
 # SECTION: netrw

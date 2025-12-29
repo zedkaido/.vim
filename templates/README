@@ -1,0 +1,5 @@
+REQUIREMENTS: vim-devel/colortemplate
+
+git clone https://github.com/lifepillar/vim-devel ~/.vim/pack/vim-devel
+
+When you are done using it `mv vim-devel .vim-devel` to stop loading it.

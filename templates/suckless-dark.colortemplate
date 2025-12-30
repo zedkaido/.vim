@@ -106,9 +106,9 @@ ColorColumn          white             dark_grey
 Conceal              none              none
 
 Cursor               black             white
-CursorColumn         white             black
-CursorLine           black             white
-CursorLineNr         white             blue
+CursorColumn         white             dark_grey
+CursorLine           white             dark_grey
+CursorLineNr         grey              black
 LineNr               grey              black
 
 DiffAdd              white             dark_grey

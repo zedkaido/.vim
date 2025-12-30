@@ -81,12 +81,13 @@ Color: white         #ffffff           231               White
 Color: silver        #fafafa           255               LightGrey
 Color: light_grey    #bcbcbc           250               LightGrey
 Color: grey          #6c6c6c           242               Grey
-Color: dark_grey     #262626           235               DarkGrey
+Color: dark_grey     #242424           235               DarkGrey
 
 Color: red           #870000           88                DarkRed
 Color: green         #87ff00           118               DarkGreen
 Color: yellow        #ffd700           220               DarkYellow
 Color: blue          #000087           18                DarkBlue
+Color: dark_blue     #00005f           17                DarkBlue
 Color: magenta       #ff0087           198               DarkMagenta
 Color: cyan          #00ffd7           50                DarkCyan
 
@@ -107,8 +108,8 @@ Conceal              none              none
 
 Cursor               white             black
 CursorColumn         black             silver
-CursorLine           white             black
-CursorLineNr         white             blue
+CursorLine           black             silver
+CursorLineNr         grey              white
 LineNr               grey              white
 
 DiffAdd              black             silver
@@ -156,8 +157,8 @@ TabLineFill          black             white
 
 Title                black             white             bold
 VertSplit            black             white
-Visual               white             blue
-VisualNOS            white             blue
+Visual               white             black
+VisualNOS            white             black
 WarningMsg           black             white
 
 WildMenu             white             blue              bold

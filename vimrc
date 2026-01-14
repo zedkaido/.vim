@@ -42,9 +42,7 @@ set undodir=~/.vim/.udir
 set undolevels=1000
 set noswapfile
 set writebackup
-
-# hide when file abondoned, instead of forced save and unloading
-set hidden
+set hidden # hide when abandoned
 
 # -------------------------
 # SECTION: CMD Line Editing
@@ -75,6 +73,14 @@ g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 # SECTION: Other
 # --------------
 set autoread # files
+
+# --------------------------------
+# SECTION: Vim9++ Bundled Packages
+# :h add-package
+# --------------------------------
+packadd! hlyank
+packadd! comment
+packadd! editorconfig
 
 # --------------------------
 # SECTION: Sensible Defaults
@@ -133,6 +139,8 @@ source ~/.vim/keymaps.vim
 source ~/.vim/snippets.vim
 source ~/.vim/cmds.vim
 source ~/.vim/km.vim
+
+# ---
 
 # fix: "vimrc" file comments
 autocmd BufWinEnter vimrc setlocal commentstring=#\ %s

@@ -3,8 +3,7 @@ vim9script
 # -------------------------
 # > km (Knowledge Map) CMDs
 # -------------------------
-# :DEPENDENCY on ./cmds.vim
-# -------------------------
+import './defs.vim'
 
 def KM()
 	cd ~/zk/km 
@@ -13,18 +12,18 @@ enddef
 
 def JR()
 	cd ~/zk/km
-	const jr_path = "~/zk/km/journal/" .. Year() .. ".txt"
+	const jr_path = "~/zk/km/journal/" .. defs.Year() .. ".txt"
 	execute "edit " .. jr_path 
 enddef
 
 def KMLog()
-	@t = ":: " .. Date() .. ":@T:" .. Time() .. " |{\n\n}|"
+	@t = ":: " .. defs.Date() .. ":@T:" .. defs.Time() .. " |{\n\n}|"
 	normal! "tpji
 enddef
 
 def KMNote()
 	cd ~/zk/km
-	const jr_path = "~/zk/km/journal/" .. Year() .. ".txt"
+	const jr_path = "~/zk/km/journal/" .. defs.Year() .. ".txt"
 	execute "edit " .. jr_path 
 	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kzoci{"
 enddef
@@ -51,7 +50,7 @@ enddef
 def ARCTSK(line1: number, line2: number)
 	var selection = getline(line1, line2)
 
-	var date_str = DateTime()
+	var date_str = defs.DateTime()
 	@a = join(map(selection, (_, line): string => '(' .. date_str .. ') ' .. line), "\n")
 
 	execute $":{line1},{line2}d"

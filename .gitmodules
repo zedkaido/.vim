@@ -1,9 +1,6 @@
 [submodule "pack/plugins/start/undotree"]
 	path = pack/plugins/start/undotree
 	url = git@github.com:mbbill/undotree.git
-[submodule "pack/plugins/start/vim-commentary"]
-	path = pack/plugins/start/vim-commentary
-	url = git@github.com:tpope/vim-commentary.git
 [submodule "pack/plugins/start/vim-fugitive"]
 	path = pack/plugins/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
@@ -13,15 +10,24 @@
 [submodule "pack/plugins/start/vim-vinegar"]
 	path = pack/plugins/start/vim-vinegar
 	url = git@github.com:tpope/vim-vinegar.git
-[submodule "pack/plugins/start/vim-sleuth"]
-	path = pack/plugins/start/vim-sleuth
-	url = git@github.com:tpope/vim-sleuth.git
 [submodule "pack/plugins/opt/vim-goyo"]
 	path = pack/plugins/opt/vim-goyo
 	url = git@github.com:junegunn/goyo.vim.git
 [submodule "pack/plugins/opt/vim-dadbod"]
 	path = pack/plugins/opt/vim-dadbod
-	url = git@github.com:tpope/vim-dadbod
+	url = git@github.com:tpope/vim-dadbod.git
 [submodule "pack/plugins/opt/vim-speeddating"]
 	path = pack/plugins/opt/vim-speeddating
-	url = git@github.com:tpope/vim-speeddating
+	url = git@github.com:tpope/vim-speeddating.git
+[submodule "pack/plugins/start/vim-peekaboo"]
+	path = pack/plugins/start/vim-peekaboo
+	url = git@github.com:junegunn/vim-peekaboo
+[submodule "pack/plugins/start/vim-eunuch"]
+	path = pack/plugins/start/vim-eunuch
+	url = git@github.com:tpope/vim-eunuch
+[submodule "pack/plugins/opt/lsp"]
+	path = pack/plugins/opt/lsp
+	url = git@github.com:yegappan/lsp
+[submodule "pack/plugins/start/vim-repeat"]
+	path = pack/plugins/start/vim-repeat
+	url = git@github.com:tpope/vim-repeat

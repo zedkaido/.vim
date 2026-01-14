@@ -31,3 +31,6 @@
 [submodule "pack/plugins/start/vim-repeat"]
 	path = pack/plugins/start/vim-repeat
 	url = git@github.com:tpope/vim-repeat
+[submodule "pack/plugins/start/vim-encdec"]
+	path = pack/plugins/start/vim-encdec
+	url = git@github.com:zedkaido/vim-encdec.git

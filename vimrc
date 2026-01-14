@@ -87,6 +87,11 @@ set nolangremap
 # Automatically detect files
 filetype plugin indent on
 
+# Mouse? Cat!
+if has('mouse')
+	set mouse=a
+endif
+
 # Delete comment character when joining commented lines.
 set formatoptions+=j
 

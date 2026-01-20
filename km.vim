@@ -3,7 +3,7 @@ vim9script
 # -------------------------
 # > km (Knowledge Map) CMDs
 # -------------------------
-import './defs.vim'
+import './lib.vim'
 
 def KM()
 	cd ~/zk/km 
@@ -12,18 +12,18 @@ enddef
 
 def JR()
 	cd ~/zk/km
-	const jr_path = "~/zk/km/journal/" .. defs.Year() .. ".txt"
+	const jr_path = "~/zk/km/journal/" .. lib.Year() .. ".txt"
 	execute "edit " .. jr_path 
 enddef
 
 def KMLog()
-	@t = ":: " .. defs.Date() .. ":@T:" .. defs.Time() .. " |{\n\n}|"
+	@t = ":: " .. lib.Date() .. ":@T:" .. lib.Time() .. " |{\n\n}|"
 	normal! "tpji
 enddef
 
 def KMNote()
 	cd ~/zk/km
-	const jr_path = "~/zk/km/journal/" .. defs.Year() .. ".txt"
+	const jr_path = "~/zk/km/journal/" .. lib.Year() .. ".txt"
 	execute "edit " .. jr_path 
 	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kzoci{"
 enddef
@@ -42,7 +42,7 @@ def TSKS()
 enddef
 
 def TSKNew()
-	var taskID = ID(3)
+	var taskID = lib.ID(3)
 	@c = "#" .. taskID # `c` :: for current task
 	execute "normal! o[ ] :: #" .. taskID "\<Esc>Bhi"
 enddef
@@ -50,7 +50,7 @@ enddef
 def ARCTSK(line1: number, line2: number)
 	var selection = getline(line1, line2)
 
-	var date_str = defs.DateTime()
+	var date_str = lib.DateTime()
 	@a = join(map(selection, (_, line): string => '(' .. date_str .. ') ' .. line), "\n")
 
 	execute $":{line1},{line2}d"

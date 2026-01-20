@@ -102,4 +102,5 @@ inoremap <M-BS> <C-W>
 
 vnoremap <leader>s c<C-r>=shellescape(@")<CR><Esc>
 
-nnoremap [h :echo "test"
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <ESC>:w<CR>

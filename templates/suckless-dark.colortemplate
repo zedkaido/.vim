@@ -75,7 +75,7 @@ lCursor           -> Cursor
 ; Color name         GUI               Base256           Base16
 ; =============================================================
 Color: black         #000000           16                Black
-Color: white         #d0d0d0           252               White
+Color: white         #dadada           253               White
 
 Color: silver        #d0d0d0           252               LightGrey
 Color: light_grey    #bcbcbc           250               LightGrey
@@ -90,8 +90,7 @@ Color: dark_blue     #00005f           17                DarkBlue
 Color: magenta       #ff0087           198               DarkMagenta
 Color: cyan          #00ffd7           50                DarkCyan
 
-Color: error         #ff0000           196               DarkRed
-
+Color: error         #870000           88                DarkRed
 
 Term colors: black red black yellow black black black white
              black red black yellow black black black white
@@ -136,7 +135,7 @@ PmenuThumb           white             black
 Question             white             black
 
 Search               black             yellow
-IncSearch            yellow            blue
+IncSearch            magenta           blue
 
 SignColumn           white             black
 SpecialKey           grey              dark_grey

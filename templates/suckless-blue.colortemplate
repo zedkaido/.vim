@@ -88,7 +88,7 @@ Color: dark_blue     #00005f           17                DarkBlue
 Color: magenta       #ff0087           198               DarkMagenta
 Color: cyan          #00ffd7           50                DarkCyan
 
-Color: error         #ff0000           196               DarkRed
+Color: error         #870000           88                DarkRed
 
 
 Term colors: black red black yellow black black black white
@@ -134,7 +134,7 @@ PmenuThumb           white             blue
 Question             white             blue
 
 Search               black             yellow
-IncSearch            yellow            black
+IncSearch            magenta           black
 
 SignColumn           white             blue
 SpecialKey           grey              dark_blue

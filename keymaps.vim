@@ -13,11 +13,13 @@ vnoremap K :m '<-2<CR>gv=gv
 
 vnoremap X "_d
 vnoremap <leader>y "+y
+vnoremap <leader>d "+d
 vnoremap <leader>p "_dP
 
 nnoremap <leader>r :%s/\<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 
 nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>bd :bd
 
 nnoremap <leader>gv :vert Git<CR>
 nnoremap <leader>gg :Git<CR>
@@ -39,7 +41,9 @@ nnoremap <leader>tx :if exists("g:syntax_on") \| syntax off \| else \| syntax on
 nnoremap <leader>hs :echo synIDattr(synID(line('.'), col('.'), 1), 'name')<CR>
 
 nnoremap <leader>ll :.!ls -1Fh<CR>
-nnoremap <leader>cd :cd %:p:h<CR>
+
+nnoremap <leader>cd :cd %:p:h <BAR> pwd<CR>
+nnoremap <leader>lcd :lcd %:p:h <Bar> pwd<CR>
 
 nnoremap [a :prev<CR>
 nnoremap ]a :next<CR>
@@ -98,9 +102,12 @@ nnoremap ]f :g//d<Left><Left>
 vnoremap _g y:exe "grep /" .. escape(@", '\\/') .. "/ *.c *.h"<CR>
 
 inoremap <C-U> <C-G>u<C-U>
+inoremap <C-L> <C-O>D
 inoremap <M-BS> <C-W>
 
 vnoremap <leader>s c<C-r>=shellescape(@")<CR><Esc>
 
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
+
+cnoremap <C-h> <Home>

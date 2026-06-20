@@ -37,7 +37,7 @@ set omnifunc=syntaxcomplete#Complete # [D](<C-x><C-o>) [C](<C-j>)
 set complete=.,w,b,u,t,i
 
 set formatoptions-=r
-set formatoptions+=j 
+set formatoptions+=j
 
 set undofile
 set undodir=~/.vim/.udir

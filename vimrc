@@ -17,7 +17,7 @@ set fillchars=vert:\|,fold:-,eob:~,lastline:@
 set backspace=indent,eol,start
 
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P\ \笑
+# set statusline=[%n]\ %<%.99f\ %y%h%w%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P\ \笑
 
 set wrap
 set linebreak
@@ -107,5 +107,4 @@ packadd! editorconfig
 source ~/.vim/keymaps.vim
 source ~/.vim/cmds.vim
 source ~/.vim/km.vim
-source ~/.vim/lsp.vim
 source ~/.vim/snippets.vim

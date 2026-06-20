@@ -25,7 +25,7 @@ def KMNote()
 	cd ~/zk/km
 	const jr_path = "~/zk/km/journal/" .. lib.Year() .. ".txt"
 	execute "edit " .. jr_path 
-	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kzoci{"
+	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kci{"
 enddef
 
 command! KM KM()
@@ -34,7 +34,7 @@ command! KMLog KMLog()
 command! KMNote KMNote()
 command! -nargs=1 KMGrep vimgrep "<args>" ~/zk/km/**/*.txt 
 
-# ---------------------------------------------------------
+# --- #
 
 def TSKS()
 	cd ~/zk/km
@@ -63,7 +63,7 @@ command! TSKNew TSKNew()
 command! -range ARCTSK ARCTSK(<line1>, <line2>)
 command! TSKArchive cd ~/zk/km | edit ~/zk/km/tasks.archive.txt 
 
-# ---------------------------------------------------------
+# --- #
 
 command! OSX cd ~/zk/km | edit ~/zk/km/software/osx/osx.txt 
 command! OSXSETUP cd ~/zk/km | edit ~/zk/km/software/osx/osxsetup.txt

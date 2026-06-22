@@ -1,4 +1,5 @@
-*.backup
-.vim-devel
+pack/
+
 .DS_Store
+*.backup
 .netrwhist

@@ -47,7 +47,7 @@ set formatoptions+=j
 set hidden
 set undofile
 set undolevels=1000
-set undodir=~/.vim/.udir
+set undodir=~/.vim.udir/
 set noswapfile
 set nobackup writebackup
 set autoread

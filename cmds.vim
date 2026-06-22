@@ -12,11 +12,11 @@ command! -nargs=? TAB TAB(<f-args>)
 
 # --- #
 
-export def PUTID(length: string = "3")
+export def PID(length: string = "3")
 	@i = lib.ID(str2nr(length))
 	normal! "ip
 enddef
-command! -nargs=? PUTID PUTID(<f-args>)
+command! -nargs=? PID PID(<f-args>)
 
 # --- #
 
@@ -31,3 +31,11 @@ export def LogTime()
 	normal! "tp
 enddef
 command! LogTime LogTime()
+
+# --- #
+
+command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+
+# --- #
+
+cabbrev sex Sexplore

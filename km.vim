@@ -6,65 +6,51 @@ vim9script
 import './lib.vim'
 
 def KM()
-	cd ~/zk/km 
-	edit ~/zk/km 
+	cd ~/zk/km
+	edit ~/zk/km
 enddef
 
 def JR()
-	cd ~/zk/km
 	const jr_path = "~/zk/km/journal/" .. lib.Year() .. ".txt"
-	execute "edit " .. jr_path 
+	execute "edit " .. jr_path
 enddef
 
 def KMLog()
-	@t = ":: " .. lib.Date() .. ":@T:" .. lib.Time() .. " |{\n\n}|"
+	var ft = toupper(strftime("[%b][%d][%a][%H:%M:%S]"))
+	@t = $":: {ft} |\{\n\n\}|"
 	normal! "tpji
 enddef
 
 def KMNote()
-	cd ~/zk/km
-	const jr_path = "~/zk/km/journal/" .. lib.Year() .. ".txt"
-	execute "edit " .. jr_path 
-	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kci{"
+	const jr_path = $"~/zk/km/journal/{lib.Year()}.txt"
+	execute "edit " .. jr_path
+	execute "normal! ggjji\<CR>\<Esc>O\<Esc>:KMLog\<CR>\<Esc>kci{\<Tab>"
 enddef
 
 command! KM KM()
 command! JR JR()
 command! KMLog KMLog()
 command! KMNote KMNote()
-command! -nargs=1 KMGrep vimgrep "<args>" ~/zk/km/**/*.txt 
+command! -nargs=1 KMGrep vimgrep "<args>" ~/zk/km/**/*.txt
 
 # --- #
 
 def TSKS()
-	cd ~/zk/km
 	edit ~/zk/km/tasks.index.txt
 enddef
 
 def TSKNew()
 	var taskID = lib.ID(3)
-	@c = "#" .. taskID # `c` :: for current task
-	execute "normal! o[ ] :: #" .. taskID "\<Esc>Bhi"
-enddef
-
-def ARCTSK(line1: number, line2: number)
-	var selection = getline(line1, line2)
-
-	var date_str = lib.DateTime()
-	@a = join(map(selection, (_, line): string => '(' .. date_str .. ') ' .. line), "\n")
-
-	execute $":{line1},{line2}d"
-	execute "edit ~/zk/km/tasks.archive.txt"
-	execute "normal! gg)o\<Esc>\"ap"
+	@c = "#" .. taskID
+	execute $"normal! o[ ] :: #{taskID} \<Esc>Bhi"
 enddef
 
 command! TSKS TSKS()
 command! TSKNew TSKNew()
-command! -range ARCTSK ARCTSK(<line1>, <line2>)
-command! TSKArchive cd ~/zk/km | edit ~/zk/km/tasks.archive.txt 
+command! TSKArchive edit ~/zk/km/tasks.archive.txt
 
 # --- #
 
-command! OSX cd ~/zk/km | edit ~/zk/km/software/osx/osx.txt 
-command! OSXSETUP cd ~/zk/km | edit ~/zk/km/software/osx/osxsetup.txt
-command! WEBM cd ~/zk/km | edit ~/zk/km/webmarks.index.txt
+command! OSX edit ~/zk/km/software/osx/osx.txt
+command! OSXSETUP edit ~/zk/km/software/osx/osxsetup.txt
+command! WEBM edit ~/zk/km/webmarks.index.txt

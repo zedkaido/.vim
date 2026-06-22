@@ -26,7 +26,6 @@ set wrap
 set linebreak
 set virtualedit=block
 
-
 filetype on
 filetype plugin on
 filetype indent off
@@ -42,7 +41,6 @@ set complete=.,w,b,u,t,i
 
 set formatoptions-=r
 set formatoptions+=j
-
 
 set hidden
 set undofile
@@ -75,7 +73,6 @@ autocmd FileType html,css,scss,svelte,javascript,typescript,json,yaml setlocal i
 # Enable the :Man command shipped inside Vim's man filetype plugin.
 runtime ftplugin/man.vim
 
-
 # [vim9] :h add-package
 packadd! hlyank
 packadd! comment
@@ -85,7 +82,6 @@ source ~/.vim/keymaps.vim
 source ~/.vim/cmds.vim
 source ~/.vim/km.vim
 source ~/.vim/snippets.vim
-
 
 # ---| DEFAULTS |---
 

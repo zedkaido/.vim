@@ -26,6 +26,7 @@ set wrap
 set linebreak
 set virtualedit=block
 
+
 filetype on
 filetype plugin on
 filetype indent off
@@ -36,12 +37,14 @@ set nocindent
 set autoindent
 set copyindent
 
-set omnifunc=syntaxcomplete#Complete # [D](<C-x><C-o>) [C](<C-j>)
+# set omnifunc=syntaxcomplete#Complete # [D](<C-x><C-o>) [C](<C-j>)
 set complete=.,w,b,u,t,i
 
 set formatoptions-=r
 set formatoptions+=j
 
+
+set hidden
 set undofile
 set undolevels=1000
 set undodir=~/.vim/.udir
@@ -58,9 +61,10 @@ set history=1000 #cmd history
 
 setglobal path=,, # avoid unnecessary searches
 
-set completeopt=menu,noselect,fuzzy # best for LSPCompletion
-set wildmode=list:longest:full
+set wildmenu
+set wildmode=list:longest,full # THE BEST!
 set wildignore+=*.swp,*.swo,*.DS_Store
+set completeopt=menu,noselect,fuzzy # best for LSPCompletion
 
 g:is_bash = 1 # good old bash!
 g:netrw_bufsettings = "noma nomod nonu nowrap ro nobl"
@@ -71,6 +75,7 @@ autocmd FileType html,css,scss,svelte,javascript,typescript,json,yaml setlocal i
 # Enable the :Man command shipped inside Vim's man filetype plugin.
 runtime ftplugin/man.vim
 
+
 # [vim9] :h add-package
 packadd! hlyank
 packadd! comment
@@ -80,6 +85,7 @@ source ~/.vim/keymaps.vim
 source ~/.vim/cmds.vim
 source ~/.vim/km.vim
 source ~/.vim/snippets.vim
+
 
 # ---| DEFAULTS |---
 

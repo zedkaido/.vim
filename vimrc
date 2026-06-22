@@ -64,7 +64,7 @@ setglobal path=,, # avoid unnecessary searches
 set wildmenu
 set wildmode=list:longest,full # THE BEST!
 set wildignore+=*.swp,*.swo,*.DS_Store
-set completeopt=menu,noselect,fuzzy # best for LSPCompletion
+set completeopt=menu,fuzzy # best for LSPCompletion
 
 g:is_bash = 1 # good old bash!
 g:netrw_bufsettings = "noma nomod nonu nowrap ro nobl"

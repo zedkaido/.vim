@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+set -e
+
+START="pack/plugins/start"
+OPT="pack/plugins/opt"
+
+help() {
+	cat << 'EOF'
+Usage :: ./vimsh cmd [opts]
+Description :: A suckless pack/ manager.
+Commands |{
+	install
+	update [pack-name]
+	uninstall <pack-name>
+	helptags
+}|
+EOF
+}
+
+get() {
+	if [ -z "$1" ]; then
+		echo "[ERROR] :: 'get' helper called without a target dir!"
+		exit 1
+	fi
+
+	local targetdir=$1
+	shift
+
+	if [ ! -d  "$targetdir" ]; then
+		echo "[INSTALLING] :: $targetdir"
+		"$@" "$targetdir"
+	else
+		echo "[-] Pack already installed: $targetdir"
+	fi
+}
+
+generate_helptags() {
+	echo "[GENERATING] :: helptags [...]"
+	vim -u NONE -e -s -c "helptags ALL" -c q
+}
+
+install() {
+	mkdir -p "$START" "$OPT"
+
+	get "$START/vim-encdec"    git clone           git@github.com:zedkaido/vim-encdec.git
+	get "$START/undotree"      git clone --depth 1 git@github.com:mbbill/undotree.git
+	get "$START/vim-fugitive"  git clone --depth 1 git@github.com:tpope/vim-fugitive.git
+	get "$START/vim-surround"  git clone --depth 1 git@github.com:tpope/vim-surround.git
+
+	get "$OPT/vim-lsp"         git clone --depth 1 git@github.com:yegappan/lsp.git
+	get "$OPT/vim-speeddating" git clone --depth 1 git@github.com:tpope/vim-speeddating.git
+
+	generate_helptags
+}
+
+update() {
+	echo "[UPDATING] :: ALL pack PLUGINS"
+	find pack/plugins -type d -name ".git" | while read -r git_dir; do
+		local path=$(dirname "$git_dir")
+		echo "[PULLING] :: latest in $path..."
+		git -C "$path" pull
+	done
+	generate_helptags
+}
+
+updatepack() {
+	local name=$1
+	for dir in "$START/$name" "$OPT/$name"; do
+		if [ -d "$dir/.git" ]; then
+			echo "[UPDATING] :: $name ($dir)..."
+			git -C "$dir" pull
+			generate_helptags
+			return 0
+		fi
+	done
+	echo "[ERROR] :: Plugin '$name' not found."
+	exit 1
+}
+
+uninstall() {
+	local name=$1
+	local targetpath=""
+
+	if test -d "$START/$name"; then
+		targetpath="$START/$name"
+	elif test -d "$OPT/$name"; then
+		targetpath="$OPT/$name"
+	else
+		echo "[ERROR] :: Plugin '$name' is not currently installed.\n"
+		exit 1
+	fi
+
+	read -p "Are you sure you want to uninstall '$name'? (y/N) " -n 1 -r
+	echo
+
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		rm -rf "$targetpath"
+		echo "[UNINSTALL] Successfull, '$name' is no more."
+		generate_helptags
+	else
+		echo "[UNINSTALL] cancelled..."
+	fi
+
+}
+
+case "$1" in
+	install)   install ;;
+	update)    [[ -n "$2" ]] && updatepack "$2" || update ;;
+	helptags)  generate_helptags ;;
+	uninstall) [[ -n "$2" ]] && uninstall "$2" || echo "[USAGE] :: $0 uninstall <plugin-name>" ;;
+	*)         help
+esac

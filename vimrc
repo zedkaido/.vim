@@ -1,5 +1,8 @@
 vim9script
 
+# vim > vi
+set nocompatible
+
 syntax off
 
 set termguicolors
@@ -40,64 +43,33 @@ set formatoptions-=r
 set formatoptions+=j
 
 set undofile
-set undodir=~/.vim/.udir
 set undolevels=1000
+set undodir=~/.vim/.udir
 set noswapfile
-set writebackup
-set hidden
+set nobackup writebackup
 set autoread
 
 set hlsearch
-set nowrapscan # I wanna know when my search hits the bottom
+set wrapscan
 set ignorecase
 set smartcase
 
 set history=1000 #cmd history
 
 setglobal path=,, # avoid unnecessary searches
-if isdirectory('src')
-	setlocal path+=src/**
-endif
 
-set wildignore+=*/.git/*
-set wildignore+=*/node_modules/*,*/build/*,*/target/*,*/min/*
-set wildignore+=*/.svelte-kit/*,*/.wrangler/*,*/project.inlang/*
-set wildignore+=tags,*.swp,*.swo,*.DS_Store
-
-set nowildmenu
-set wildmode=list:full
 set completeopt=menu,noselect,fuzzy # best for LSPCompletion
-
-g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+set wildmode=list:longest:full
+set wildignore+=*.swp,*.swo,*.DS_Store
 
 g:is_bash = 1 # good old bash!
-
-# Disable a legacy behavior that can break plugin maps.
-set nolangremap
-
-if has('mouse') | set mouse=a | endif
+g:netrw_bufsettings = "noma nomod nonu nowrap ro nobl"
 
 # consider-this-a-whole-keyword
 autocmd FileType html,css,scss,svelte,javascript,typescript,json,yaml setlocal iskeyword+=\-
 
-if &ttimeoutlen == -1
-	set ttimeout
-	set ttimeoutlen=50
-endif
-
 # Enable the :Man command shipped inside Vim's man filetype plugin.
 runtime ftplugin/man.vim
-
-# Persist g:UPPERCASE variables, used by some plugins, in .viminfo.
-if !empty(&viminfo)
-	set viminfo^=!
-endif
-
-# Saving options in session and view files causes more problems than it solves
-set sessionoptions-=options
-set viewoptions-=options
-
-command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
 # [vim9] :h add-package
 packadd! hlyank
@@ -108,3 +80,20 @@ source ~/.vim/keymaps.vim
 source ~/.vim/cmds.vim
 source ~/.vim/km.vim
 source ~/.vim/snippets.vim
+
+# ---| DEFAULTS |---
+
+# Show @@@ in the last line if it is truncated.
+set display=truncate
+
+if &ttimeoutlen == -1
+	set ttimeout
+	set ttimeoutlen=42
+endif
+
+# Disable a legacy behavior that can break plugin maps.
+set nolangremap
+
+set nrformats-=octal
+
+if has("mouse") | set mouse=a | endif

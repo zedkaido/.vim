@@ -5,8 +5,6 @@ g:mapleader = " "
 vmap < <gv
 vmap > >gv
 
-noremap <F2> :set paste!<CR>:echo &paste<CR>
-
 nnoremap Q :.!bash<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -15,6 +13,9 @@ vnoremap X "_d
 vnoremap <leader>y "+y
 vnoremap <leader>d "+d
 vnoremap <leader>p "_dP
+
+noremap <F2> :set paste!<CR>:echo &paste<CR>
+nnoremap <F4> :let &virtualedit = (&virtualedit == 'all' ? '' : 'all')<CR>
 
 nnoremap <leader>r :%s/\<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 

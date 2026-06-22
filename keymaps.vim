@@ -21,6 +21,9 @@ nnoremap <leader>r :%s/\<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>bd :bd
 
+nnoremap - :execute $"Explore {expand('%:p:h')}"<CR>
+autocmd FileType netrw nmap <buffer> - <Plug>NetrwBrowseUpDir
+
 nnoremap <leader>gv :vert Git<CR>
 nnoremap <leader>gg :Git<CR>
 nnoremap <leader>gb :Git blame<CR>

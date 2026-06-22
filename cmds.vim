@@ -10,7 +10,6 @@ export def TAB(len: string = '8')
 enddef
 command! -nargs=? TAB TAB(<f-args>)
 
-# --- #
 
 export def PID(length: string = "3")
 	@i = lib.ID(str2nr(length))
@@ -18,7 +17,6 @@ export def PID(length: string = "3")
 enddef
 command! -nargs=? PID PID(<f-args>)
 
-# --- #
 
 export def LogDate()
 	@t = lib.Date()
@@ -32,10 +30,8 @@ export def LogTime()
 enddef
 command! LogTime LogTime()
 
-# --- #
 
 command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
-# --- #
 
 cabbrev sex Sexplore
